@@ -15,13 +15,16 @@ const Info = styled.section`
 
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  // const siteTitle = data.site.siteMetadata.title
+  const siteTitle = 'test'
+  const post = data.markdownRemark
+
+  console.log('postStructure', post)
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Info />
+      <Info dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 }
@@ -35,19 +38,14 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
+    markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
+      id
+      excerpt(pruneLength: 160)
+      html
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+        description
       }
     }
   }
