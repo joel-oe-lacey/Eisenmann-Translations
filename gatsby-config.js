@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Translation Template`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Joel Lacey`,
+      summary: `Humane technologist.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
@@ -12,6 +12,18 @@ module.exports = {
     },
   },
   plugins: [
+    'gatsby-theme-material-ui',
+    {
+      resolve: 'gatsby-plugin-tinacms',
+      options: {
+        // The CMS will be disabled on your production site
+        enabled: process.env.NODE_ENV !== 'production',
+        sidebar: true,
+        plugins: [
+          // We'll add some gatsby-tinacms plugins later
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,6 +36,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages`,
+        name: `pages`,
       },
     },
     {

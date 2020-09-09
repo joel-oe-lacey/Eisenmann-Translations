@@ -31,14 +31,14 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const pageQuery = graphql`
-  query {
+export const pageQuery = graphql `
+  query SitePagesBySlug($slug: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
       html
