@@ -3,8 +3,9 @@ import { Link } from "gatsby"
 import styled from 'styled-components'
 
 const StyledNav = styled.nav`
-    height: 20%;
+    height: 10%;
     width: 100%;
+    opacity: .5;
     background-color: blue;
     position: fixed;
 `;

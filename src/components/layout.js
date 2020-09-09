@@ -27,7 +27,7 @@ const Wrapper = styled.section`
 `;
 
 const StyledBody = styled.main`
-    height: 60%;
+    height: min-content;
     width: 100%;
 `;
 
