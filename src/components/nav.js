@@ -10,6 +10,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import ListSubheader from '@material-ui/core/ListSubheader';
 import Link from './link';
 
 import MenuIcon from '@material-ui/icons/Menu';
@@ -39,11 +40,6 @@ const StyledNav = styled.nav `
     position: fixed;
 `;
 
-//take data.reduce
-//go through and add HTML to thing
-//add tracker for current node.frontmatter.category
-//when different, add divider and continue
-
 const FetchNav = ({ data }) => { 
   const classes = useStyles();
   const [triggered, setTrigger] = useState(false);
@@ -56,8 +52,17 @@ const FetchNav = ({ data }) => {
     setTrigger(open);
   };
 
-  const posts = data.allMarkdownRemark.edges
-  const rootPath = `${__PATH_PREFIX__}/`
+  const postsByCategory = data.allMarkdownRemark.edges.reduce((groupPosts, { node }) => {
+    const category = node.frontmatter.category ? node.frontmatter.category : 'none';
+
+    if (!groupPosts[category]) {
+      groupPosts[category] = [node]
+    } else {
+      groupPosts[category].push(node)
+    }
+
+    return groupPosts;
+  }, {})
 
   const list = () => (
     <div
@@ -65,15 +70,32 @@ const FetchNav = ({ data }) => {
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      {posts.map(({ node }) => {
-        const slug = node.fields.slug;
-        const title = node.frontmatter.title;
-        return (
-            <Link to={slug}>
-              <ListItemText primary={title} />
-            </Link>
-        );
-      })}
+        {
+          Object.keys(postsByCategory).map(category => {
+            return (
+              <React.Fragment key={category}>
+                <List>
+                  <ListSubheader>{category}</ListSubheader>
+                  {
+                    postsByCategory[category].map(node => {
+                      const slug = node.fields.slug;
+                      const title = node.frontmatter.title;
+                      
+                      return (
+                      <ListItem button key={title}>
+                        <Link to={slug}>
+                          <ListItemText primary={title} />
+                        </Link>
+                      </ListItem>
+                      )
+                    })
+                  }
+                </List>
+                <Divider />
+              </React.Fragment>
+            )
+          })
+        }
     </div>
   );
 
