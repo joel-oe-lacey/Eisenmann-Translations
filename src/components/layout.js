@@ -9,8 +9,11 @@ import { rhythm, scale } from "../utils/typography"
 import Nav from "../components/nav";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import reset from 'styled-reset'
 
 const GlobalStyle = createGlobalStyle`
+  ${reset}
+
   body, 
   html,
   #___gatsby {
@@ -38,12 +41,12 @@ const StyledBody = styled.main`
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
- 
+
   return (
     <Wrapper>
       <GlobalStyle />
       <Nav/>
-      <Header/>
+      <Header title={title}/>
       <StyledBody>{children}</StyledBody>
       <Footer/>
     </Wrapper>
