@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { graphql, StaticQuery } from "gatsby"
+import Image from "gatsby-image"
 import styled from 'styled-components'
 // import { makeStyles, styled } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
@@ -32,7 +33,7 @@ const useStyles = makeStyles({
 //     position: 'fixed',
 // })
 
-const StyledNav = styled.nav `
+const StyledNav = styled.nav`
     height: 10%;
     width: 100%;
     opacity: .5;
@@ -105,6 +106,10 @@ const FetchNav = ({ data }) => {
         <Button onClick={toggleDrawer(true)}>
           <MenuIcon />
         </Button>
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt="The company logo"
+        />
         <Drawer anchor='left' open={triggered} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
@@ -135,6 +140,13 @@ const Nav = () => {
                   type
                   category
                 }
+              }
+            }
+          }
+          avatar: file(absolutePath: { regex: "/Banner_Ende.png/" }) {
+            childImageSharp {
+              fixed(width: 960, height: 100) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
