@@ -37,8 +37,12 @@ const StyledNav = styled.nav`
     height: 10%;
     width: 100%;
     opacity: .5;
-    background-color: blue;
-    position: fixed;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    z-index: 99999;
 `;
 
 const FetchNav = ({ data }) => { 
