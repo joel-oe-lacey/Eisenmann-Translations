@@ -17,10 +17,10 @@ import TableFooter from '@material-ui/core/TableFooter';
 const StyledFooter = styled(TableFooter)({
     height: 'min-height',
     width: '100%',
-    backgroundColor: 'grey',
+    backgroundColor: '#333333',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'flex-end'
+    justifyContent: 'space-between'
 })
 
 const FetchFooter = ({ data }) => { 
@@ -50,11 +50,11 @@ const FetchFooter = ({ data }) => {
                       const title = node.frontmatter.title;
                       
                       return (
-                      <ListItem button key={title}>
-                        <Link to={slug}>
-                          <ListItemText primary={title} />
-                        </Link>
-                      </ListItem>
+                      <Link to={slug}>
+                        <ListItem button key={title}>
+                            <ListItemText primary={title} />
+                        </ListItem>
+                      </Link>
                       )
                     })
                   }
@@ -68,6 +68,12 @@ const FetchFooter = ({ data }) => {
 
   return (
     <StyledFooter>
+        <Image
+        fixed={data.banner.childImageSharp.fixed}
+        alt="A banner of tiled greyscale landscape shots" />
+        <Image
+        fixed={data.certification.childImageSharp.fixed}
+        alt="A blue BDU certification badge" />
         {list()}
     </StyledFooter>
   )
@@ -98,9 +104,16 @@ const Footer = () => {
               }
             }
           }
-          avatar: file(absolutePath: { regex: "/Banner_Ende.png/" }) {
+          banner: file(absolutePath: { regex: "/Banner_Unten.jpg/" }) {
             childImageSharp {
-              fixed(width: 960, height: 100) {
+              fixed(width: 960, height: 50) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+          certification: file(absolutePath: { regex: "/BDUE-Mitglied-Logo.jpg/" }) {
+            childImageSharp {
+              fixed(width: 100, height: 145) {
                 ...GatsbyImageSharpFixed
               }
             }

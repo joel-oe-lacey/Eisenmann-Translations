@@ -42,7 +42,7 @@ const StyledNav = styled.nav`
     flex-direction: row;
     align-items: center;
     position: absolute;
-    z-index: 99999;
+    z-index: 1000;
 `;
 
 const FetchNav = ({ data }) => { 
@@ -87,11 +87,11 @@ const FetchNav = ({ data }) => {
                       const title = node.frontmatter.title;
                       
                       return (
-                      <ListItem button key={title}>
-                        <Link to={slug}>
-                          <ListItemText primary={title} />
-                        </Link>
-                      </ListItem>
+                      <Link to={slug}>
+                        <ListItem button key={title}>
+                            <ListItemText primary={title} />
+                        </ListItem>
+                      </Link>
                       )
                     })
                   }
