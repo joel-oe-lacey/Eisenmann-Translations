@@ -1,7 +1,7 @@
 ---
 title: Subject Areas
 type: pages
-category: about
+category: About
 description: "Subject areas we've worked in."
 ---
 
