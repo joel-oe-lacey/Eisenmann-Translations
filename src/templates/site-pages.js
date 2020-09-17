@@ -5,12 +5,12 @@ import styled from 'styled-components'
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import LangSelector from "../components/languageSelector"
 import { rhythm } from "../utils/typography"
 
 const Info = styled.section`
     height: 100%;
     width: 100%;
-    background-color: honeydew;
 `;
 
 
@@ -19,11 +19,10 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = 'test'
   const post = data.markdownRemark
 
-  console.log('postStructure', post)
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
+      {post.frontmatter.category === "Languages" && <LangSelector />}
       <Info dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
@@ -46,6 +45,7 @@ export const pageQuery = graphql `
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        category 
       }
     }
   }
