@@ -6,16 +6,13 @@ import logo from '../../content/assets/logo.svg'
 const StyledHeader = styled.section`
   height: 60%;
   width: 100%;
-  background-color: lightgrey;
+  border-bottom: 1px solid lightgrey;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-image: url(${logo});
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-clip: border-box;
-  background-position: top left;
+  background: linear-gradient(0deg, rgba(232,232,232,1) 0%, rgba(242,242,242,1) 34%, rgba(255,255,255,1) 75%);
+  z-index: -1000;
 `;
 
 const FloatedHeader = styled.h1`
@@ -25,15 +22,22 @@ const FloatedHeader = styled.h1`
   font-weight: bold;
 `;
 
-const Logo = styled.img`
-  height: 200%;
-  width: 25%;
+const Logo = styled.section`
+  height: 65%;
+  width: 100%;
+  position: absolute;
+  z-index: -100;
+  background-image: url(${logo});
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-position: top left;
 `;
 
 const Header = ({title}) => { 
   return (
     <StyledHeader>
-      {/* <Logo src={logo} alt="The company logo." /> */}
+      <Logo />
       <FloatedHeader>{title}</FloatedHeader>
     </StyledHeader>
   )
