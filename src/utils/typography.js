@@ -1,17 +1,17 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import doelgerTheme from 'typography-theme-doelger'
 
-Wordpress2016.overrideThemeStyles = () => {
+doelgerTheme.overrideThemeStyles = () => {
   return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
+    "a": {
+      textShadow: `none`,
     },
   }
 }
 
-delete Wordpress2016.googleFonts
+// delete doelgerTheme.googleFonts
 
-const typography = new Typography(Wordpress2016)
+const typography = new Typography(doelgerTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
