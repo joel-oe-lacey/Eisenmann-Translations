@@ -19,9 +19,31 @@ const StyledFooter = styled(TableFooter)({
     width: '100%',
     backgroundColor: '#333333',
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+    flexFlow: 'row wrap',
+    justifyContent: 'space-between',
+    padding: '3rem'
 })
+
+const Certification = styled.section`
+    height: min-content;
+    width: 40%;
+    padding: 1rem;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: lightgrey;
+`;
+
+const Legal = styled.section`
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: lightgrey;
+    align-items: center;
+`;
 
 const FetchFooter = ({ data }) => { 
   const postsByCategory = data.allMarkdownRemark.edges.reduce((groupPosts, { node }) => {
@@ -48,9 +70,10 @@ const FetchFooter = ({ data }) => {
                     postsByCategory[category].map(node => {
                       const slug = node.fields.slug;
                       const title = node.frontmatter.title;
+                      const redirect = node.frontmatter.redirectLink;
                       
                       return (
-                      <Link to={slug}>
+                      <Link to={redirect ? redirect : slug}>
                         <ListItem button key={title}>
                             <ListItemText primary={title} />
                         </ListItem>
@@ -68,13 +91,23 @@ const FetchFooter = ({ data }) => {
 
   return (
     <StyledFooter>
-        <Image
+        {/* <Image
         fixed={data.banner.childImageSharp.fixed}
-        alt="A banner of tiled greyscale landscape shots" />
-        <Image
-        fixed={data.certification.childImageSharp.fixed}
-        alt="A blue BDU certification badge" />
+        alt="A banner of tiled greyscale landscape shots" /> */}
         {list()}
+        <Certification>
+          <p>This is a certification badge, need localization</p>
+          <Link to="/about/team">
+            <Image
+            fixed={data.certification.childImageSharp.fixed}
+            alt="A blue BDU certification badge" />
+          </Link>
+        </Certification>
+        <Legal>
+          <p>Data Privacy Link</p>
+          <p>© {new Date().getFullYear()} Eisenmann Uebersetzungen,</p>
+          <p>Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a></p>
+        </Legal>
     </StyledFooter>
   )
 }
@@ -89,7 +122,13 @@ const Footer = () => {
               title
             }
           }
-          allMarkdownRemark {
+          allMarkdownRemark(filter: {
+              frontmatter: {
+                category: {
+                  eq: "About"
+                }
+              }
+            }) {
             edges {
               node {
                 excerpt
@@ -100,6 +139,7 @@ const Footer = () => {
                   title
                   type
                   category
+                  redirectLink
                 }
               }
             }
