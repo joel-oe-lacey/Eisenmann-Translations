@@ -15,8 +15,7 @@ const Info = styled.section`
 
 
 const BlogIndex = ({ data, location }) => {
-  // const siteTitle = data.site.siteMetadata.title
-  const siteTitle = 'test'
+  const siteTitle = data.markdownRemark.frontmatter.title
   const post = data.markdownRemark
 
   return (

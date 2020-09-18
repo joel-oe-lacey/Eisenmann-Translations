@@ -25,14 +25,6 @@ const useStyles = makeStyles({
   },
 });
 
-// const StyledNav = styled(Menu)({
-//     height: '10%',
-//     width: '100%',
-//     opacity: '.5',
-//     backgroundColor: 'blue',
-//     position: 'fixed',
-// })
-
 const StyledNav = styled.nav`
     height: 10%;
     width: 100%;
@@ -45,8 +37,12 @@ const StyledNav = styled.nav`
     z-index: 1000;
 `;
 
+const HomeLink = styled.h2`
+  margin: 0;
+  text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
+`
+
 const FetchNav = ({ data }) => { 
-  const classes = useStyles();
   const [triggered, setTrigger] = useState(false);
 
   const toggleDrawer = (open) => (event) => {
@@ -85,10 +81,13 @@ const FetchNav = ({ data }) => {
                     postsByCategory[category].map(node => {
                       const slug = node.fields.slug;
                       const title = node.frontmatter.title;
+                      //Used to allow easy additions of redirects via markdown
+                      const redirect = node.frontmatter.redirectLink;
+
                       
                       return (
-                      <Link to={slug}>
-                        <ListItem button key={title}>
+                      <Link to={redirect ? redirect : slug} key={title}>
+                        <ListItem button>
                             <ListItemText primary={title} />
                         </ListItem>
                       </Link>
@@ -110,10 +109,9 @@ const FetchNav = ({ data }) => {
         <Button onClick={toggleDrawer(true)}>
           <MenuIcon />
         </Button>
-        <Image
-          fixed={data.avatar.childImageSharp.fixed}
-          alt="The company logo"
-        />
+        <Link to='/'>
+          <HomeLink>Eisenmann Translation</HomeLink>
+        </Link>
         <Drawer anchor='left' open={triggered} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
@@ -132,7 +130,13 @@ const Nav = () => {
               title
             }
           }
-          allMarkdownRemark {
+          allMarkdownRemark(filter: {
+              frontmatter: {
+                category: {
+                  eq: "About"
+                }
+              }
+            }) {
             edges {
               node {
                 excerpt
@@ -143,6 +147,7 @@ const Nav = () => {
                   title
                   type
                   category
+                  redirectLink
                 }
               }
             }

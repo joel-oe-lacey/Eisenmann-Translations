@@ -10,16 +10,11 @@ import { rhythm } from "../utils/typography"
 const Info = styled.section`
     height: 100%;
     width: 100%;
-    background-color: honeydew;
 `;
 
-
 const BlogIndex = ({ data, location }) => {
-  // const siteTitle = data.site.siteMetadata.title
-  const siteTitle = 'test'
+  const siteTitle = data.markdownRemark.frontmatter.title
   const post = data.markdownRemark
-
-  console.log('postStructure', post)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -46,6 +41,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        category
       }
     }
   }

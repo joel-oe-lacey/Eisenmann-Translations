@@ -4,7 +4,8 @@ import doelgerTheme from 'typography-theme-doelger'
 doelgerTheme.overrideThemeStyles = () => {
   return {
     "a": {
-      textShadow: `none`,
+      textShadow: 'none',
+      backgroundImage: 'none'
     },
   }
 }

@@ -30,7 +30,6 @@ const theme = createMuiTheme({
 });
 
 const GlobalStyle = createGlobalStyle`
-
   body, 
   html,
   #___gatsby {
@@ -48,7 +47,8 @@ const Wrapper = styled.section`
 const StyledBody = styled.main`
     height: min-content;
     width: 100%;
-    padding: 2rem;
+    padding: 3rem 4rem 4rem 4rem;
+    background: white;
 
     h1 {
       color: #f44336;

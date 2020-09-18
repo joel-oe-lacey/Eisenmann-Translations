@@ -25,7 +25,7 @@ const FloatedHeader = styled.h1`
 const Logo = styled.section`
   height: 65%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: -100;
   background-image: url(${logo});
   background-size: 60%;
