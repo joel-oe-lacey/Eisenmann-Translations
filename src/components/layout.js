@@ -1,27 +1,44 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled, {
   createGlobalStyle
 } from 'styled-components'
-
-import { rhythm, scale } from "../utils/typography"
-
+import {
+  Link
+} from "gatsby"
+import Fab from '@material-ui/core/Fab';
 import Nav from "../components/nav";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import {
+  createMuiTheme
+} from '@material-ui/core/styles';
+import {
+  ThemeProvider
+} from '@material-ui/styles';
+import red from '@material-ui/core/colors/red';
+
+// import {
+//   rhythm
+// } from "../utils/typography"
+
+const theme = createMuiTheme({
+  palette: {
+    primary: red,
+  },
+});
 
 const GlobalStyle = createGlobalStyle`
   body, 
   html,
-  #___gatsby {
+  #___gatsby,
+  #gatsby-focus-wrapper {
     height: 100%;
     width: 100%;
   }
 `
-
 const Wrapper = styled.section`
     height: 100vh;
-    // width: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
 `;
@@ -29,25 +46,33 @@ const Wrapper = styled.section`
 const StyledBody = styled.main`
     height: min-content;
     width: 100%;
+    background: white;
 `;
 
-  // marginLeft: auto;
-  // marginRight: auto;
-  // maxWidth: ${rhythm(24)};
-  // padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
+const StyledFAB = styled(Fab)({
+  position: 'fixed',
+  right: 0,
+  bottom: 0,
+  margin: '3rem',
+});
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
- 
   return (
-    <Wrapper>
-      <GlobalStyle />
-      <Nav/>
-      <Header/>
-      <StyledBody>{children}</StyledBody>
-      <Footer/>
-    </Wrapper>
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <GlobalStyle />
+        <Nav/>
+        <Header location={location} title={title}/>
+        <StyledBody>{children}</StyledBody>
+        <Footer/>
+        <Link to="/about/prices">
+          <StyledFAB variant="extended" color="primary" aria-label="contact us">
+            Contact Us
+          </StyledFAB>
+        </Link>
+      </Wrapper>
+    </ThemeProvider>
   )
 }
 
-export default Layout
+export default Layout;

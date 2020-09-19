@@ -1,25 +1,22 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import styled from 'styled-components'
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+
+import {
+  rhythm
+} from "../utils/typography"
 
 const Info = styled.section`
     height: 100%;
     width: 100%;
-    background-color: honeydew;
+    padding: ${rhythm(2.5)};
 `;
 
-
 const BlogIndex = ({ data, location }) => {
-  // const siteTitle = data.site.siteMetadata.title
-  const siteTitle = 'test'
+  const siteTitle = data.markdownRemark.frontmatter.title
   const post = data.markdownRemark
-
-  console.log('postStructure', post)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -38,7 +35,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
+    markdownRemark(frontmatter: { category: { eq: "Landing" } }) {
       id
       excerpt(pruneLength: 160)
       html
@@ -46,6 +43,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        category
       }
     }
   }

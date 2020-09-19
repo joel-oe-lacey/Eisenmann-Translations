@@ -1,6 +1,7 @@
 module.exports = {
+  pathPrefix: '/Eisenmann-Translations',
   siteMetadata: {
-    title: `Translation Template`,
+    title: `Eisenmann Translations`,
     author: {
       name: `Joel Lacey`,
       summary: `Humane technologist.`,

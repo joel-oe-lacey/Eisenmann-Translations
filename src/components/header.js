@@ -1,17 +1,88 @@
 import React from "react"
-import { Link } from "gatsby"
+import {
+  graphql,
+  StaticQuery
+} from "gatsby"
 import styled from 'styled-components'
+import logo from '../../content/assets/logo.svg'
+import Image from "gatsby-image"
+import {
+  rhythm
+} from "../utils/typography"
 
 const StyledHeader = styled.section`
-    height: 40%;
-    width: 100%;
-    background-color: lightgrey;
+  height: 60%;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, rgba(232,232,232,1) 0%, rgba(242,242,242,1) 34%, rgba(255,255,255,1) 75%);
+  z-index: -1000;
 `;
 
-const Header = () => { 
+const StyledHolder = styled.h1`
+  margin: ${props => props.location === "/" ? '0' : '100%'};
+`
+
+//color hardcoded here where it shouldn't be
+const FloatedTitle = styled.h1`
+  font-weight: bold;
+  border-radius: 5%;
+  margin: ${props => props.location === "/" ? '15% 0% 15% 30%' : '15%'};
+  color: ${props => props.location === "/" ? 'black' : 'rgba(198, 40, 40, 0.6)'};
+  position: ${props => props.location === "/" ? 'relative' : 'fixed'};
+  background: ${props => props.location === "/" ? 'none' : 'rgba(51, 51, 51, 1)'};
+  padding: ${rhythm(1)};
+  text-shadow: ${props => props.location === "/" ? '0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff' : '0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1)'};
+`;
+
+const Logo = styled.section`
+  height: 65%;
+  width: 100%;
+  position: fixed;
+  z-index: -100;
+  background-image: url(${logo});
+  background-size: calc(50% + 15rem);
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-position: top left;
+`;
+
+const Backdrop = styled(Image)({
+  height: '100%',
+  width: '100%',
+  zIndex: -100,
+  objectFit: 'cover'
+});
+
+const FetchHeader = ({location, title, data}) => { 
   return (
     <StyledHeader>
+      {location === "/" ? <Logo /> : <Backdrop fluid={data.background.childImageSharp.fluid} style={{position: 'absolute'}}/>}
+      <FloatedTitle location={location}>{title}</FloatedTitle>
+      <StyledHolder location={location}/>
     </StyledHeader>
+  )
+}
+
+const Header = ({ location, title }) => {
+    return (
+    <StaticQuery
+      query={graphql`
+        query {
+          background: file(absolutePath: { regex: "/river.jpg/" }) {
+            childImageSharp {
+              fluid(maxWidth: 4500, maxHeight: 3000) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      `}
+      render={data => <FetchHeader location={location.pathname} title={title} data={data} />}
+    />
   )
 }
 
