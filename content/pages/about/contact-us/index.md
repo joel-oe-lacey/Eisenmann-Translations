@@ -22,5 +22,3 @@ E-mail: [info@fachuebersetzungen.de](mailto:info@fachuebersetzungen.de)
 Established 01/06/1990 in Pforzheim
 
 VAT-ID: DE144100052
-
-[Home](/about/landing)

@@ -47,5 +47,3 @@ Certified translations in Germany may only be completed by translators who have 
 Georg Eisenmann is accredited as a publicly appointed and sworn translator for English and German (Regional Court of Karlsruhe) at the American Consulate General in Frankfurt and the British Consulate General in Munich.
 
 ![George Eisenmann Certification](./georg-cert.png)
-
-[Home](/about/landing)
