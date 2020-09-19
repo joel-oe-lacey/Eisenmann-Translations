@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/Eisenmann-Translations',
   siteMetadata: {
     title: `Eisenmann Translations`,
     author: {

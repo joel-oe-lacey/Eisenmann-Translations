@@ -126,9 +126,9 @@ const FetchFooter = ({ data }) => {
           </Link>
         </Certification>
         <Legal>
-          <p>Data Privacy</p>
-          <p>© {new Date().getFullYear()} Eisenmann Uebersetzungen,</p>
+          <p>© {new Date().getFullYear()} Eisenmann Uebersetzungen</p>
           <p>Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a></p>
+          <a href="">Data Privacy</a>
         </Legal>
     </StyledFooter>
   )
