@@ -7,6 +7,15 @@ doelgerTheme.overrideThemeStyles = () => {
       textShadow: 'none',
       backgroundImage: 'none'
     },
+    "a:hover": {
+      textDecoration: 'none'
+    },
+    "h1, h2, h3, h4, h5, h6": {
+      color: '#f44336'
+    },
+    "li > p": {
+      fontWeight: 'bold'
+    }
   }
 }
 

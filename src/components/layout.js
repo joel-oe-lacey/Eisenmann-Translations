@@ -2,19 +2,13 @@ import React from "react"
 import styled, {
   createGlobalStyle
 } from 'styled-components'
-
-// import { rhythm, scale } from "../utils/typography"
-// import {
-//   styled as styledUI
-// } from '@material-ui/core/styles';
-
+import {
+  Link
+} from "gatsby"
 import Fab from '@material-ui/core/Fab';
 import Nav from "../components/nav";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import reset from 'styled-reset';
-import Link from './link';
-
 import {
   createMuiTheme
 } from '@material-ui/core/styles';
@@ -22,6 +16,10 @@ import {
   ThemeProvider
 } from '@material-ui/styles';
 import red from '@material-ui/core/colors/red';
+
+import {
+  rhythm
+} from "../utils/typography"
 
 const theme = createMuiTheme({
   palette: {
@@ -47,45 +45,8 @@ const Wrapper = styled.section`
 const StyledBody = styled.main`
     height: min-content;
     width: 100%;
-    padding: 3rem 4rem 4rem 4rem;
+    padding: ${rhythm(2.5)};
     background: white;
-
-    h1 {
-      color: #f44336;
-      margin: 1rem 0 1rem 0;
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      color: #f44336;
-      margin: .5rem 0 .5rem 0;
-      font-size: 1.8rem;
-    }
-
-    h3 {
-      color: #f44336;
-      margin: .5rem 0 .5rem 0;
-      font-size: 1.5rem;
-    }
-  
-    h4 {
-      color: #f44336;
-      margin: .5rem 0 .5rem 0;
-      font-size: 1.25rem;
-    }
-
-    p {
-      margin: .5rem 0 .5rem 0;
-    }
-
-    li {
-      margin-top: .5rem;
-      margin-left: 2rem;
-
-      p {
-        font-weight: bold;
-      }
-    }
 `;
 
 const StyledFAB = styled(Fab)({
@@ -96,8 +57,6 @@ const StyledFAB = styled(Fab)({
 });
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
