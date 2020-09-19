@@ -11,27 +11,50 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import TableFooter from '@material-ui/core/TableFooter';
+// import TableFooter from '@material-ui/core/TableFooter';
 
-const StyledFooter = styled(TableFooter)({
-    height: 'min-height',
-    width: '100%',
-    backgroundColor: '#333333',
-    display: 'flex',
-    flexFlow: 'row wrap',
-    justifyContent: 'space-between',
-    padding: '3rem'
-})
+// const StyledFooter = styled(TableFooter)({
+//     height: 'min-content',
+//     width: '100%',
+//     backgroundColor: '#333333',
+//     display: 'flex',
+//     flexFlow: 'row wrap',
+//     justifyContent: 'space-between',
+//     padding: '3rem',
+//     margin: '0'
+// })
+
+const StyledFooter = styled.footer`
+    height: min-content;
+    width: 100%;
+    background-color: #333333;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 3rem;
+    margin: 0;
+    @media (max-width: 1100px) {
+      flex-flow: column;
+    }
+`;
 
 const Certification = styled.section`
     height: min-content;
-    width: 40%;
+    width: min-content;
     padding: 1rem;
     border: 1px solid lightgrey;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: lightgrey;
+
+    > p {
+      margin-right: 2rem;
+    }
+
+    @media (max-width: 1100px) {
+      width: 100%;
+    }
 `;
 
 const Legal = styled.section`
@@ -95,15 +118,15 @@ const FetchFooter = ({ data }) => {
         alt="A banner of tiled greyscale landscape shots" /> */}
         {list()}
         <Certification>
-          <p>This is a certification badge, need localization</p>
+          <p>Our translators are certified under the BDÜ</p>
           <Link to="/about/team">
             <Image
             fixed={data.certification.childImageSharp.fixed}
-            alt="A blue BDU certification badge" />
+            alt="A blue BDÜ certification badge" />
           </Link>
         </Certification>
         <Legal>
-          <p>Data Privacy Link</p>
+          <p>Data Privacy</p>
           <p>© {new Date().getFullYear()} Eisenmann Uebersetzungen,</p>
           <p>Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a></p>
         </Legal>
@@ -123,10 +146,12 @@ const Footer = () => {
           }
           allMarkdownRemark(filter: {
               frontmatter: {
-                category: {
-                  eq: "About"
+                linkDisplay: {
+                  eq: true
                 }
               }
+            }, sort: {
+            fields: frontmatter___categoryIndex
             }) {
             edges {
               node {
