@@ -5,7 +5,6 @@ import {
 } from "gatsby"
 import styled from 'styled-components'
 // import { styled } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -22,18 +21,6 @@ const Wrapper = styled(List)({
     overflow: 'scroll',
     marginBottom: '2rem'
 })
-
-// const selectorWrapper = styled.section`
-//     height: 20%;
-//     width: min-content;
-//     background-color: #333333;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-// `;
-
-//languages are already filtered here. Categories might be useful for footer and header 
 
 const FetchSelector = ({ data }) => { 
   const languages = data.allMarkdownRemark.edges;

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from 'styled-components'
 import logo from '../../content/assets/logo.svg'
 
@@ -18,8 +17,8 @@ const StyledHeader = styled.section`
 const FloatedHeader = styled.h1`
   left: 60%;
   margin: 15% 0% 15% 30%;
-  font-size: 2.5rem;
   font-weight: bold;
+  color: black;
 `;
 
 const Logo = styled.section`
@@ -28,7 +27,7 @@ const Logo = styled.section`
   position: fixed;
   z-index: -100;
   background-image: url(${logo});
-  background-size: 60%;
+  background-size: calc(50% + 15rem);
   background-repeat: no-repeat;
   background-clip: border-box;
   background-position: top left;

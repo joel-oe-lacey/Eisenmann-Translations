@@ -1,10 +1,6 @@
 import React, { useState } from "react"
-import { graphql, StaticQuery } from "gatsby"
-import Image from "gatsby-image"
+import { Link, graphql, StaticQuery } from "gatsby"
 import styled from 'styled-components'
-// import { makeStyles, styled } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/core/styles';
-import Menu from '@material-ui/core/Menu';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
@@ -12,18 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import Link from './link';
-
 import MenuIcon from '@material-ui/icons/Menu';
-
-const useStyles = makeStyles({
-  list: {
-    width: 250,
-  },
-  fullList: {
-    width: 'auto',
-  },
-});
 
 const StyledNav = styled.nav`
     height: 10%;
@@ -39,7 +24,8 @@ const StyledNav = styled.nav`
 
 const HomeLink = styled.h2`
   margin: 0;
-  text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
+  text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff;
+  color: black;
 `
 
 const FetchNav = ({ data }) => { 

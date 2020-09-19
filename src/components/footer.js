@@ -1,5 +1,6 @@
 import React from "react"
 import {
+  Link,
   graphql,
   StaticQuery
 } from "gatsby"
@@ -7,11 +8,9 @@ import Image from "gatsby-image"
 import styled from 'styled-components'
 // import { makeStyles, styled } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import Link from './link';
 import TableFooter from '@material-ui/core/TableFooter';
 
 const StyledFooter = styled(TableFooter)({

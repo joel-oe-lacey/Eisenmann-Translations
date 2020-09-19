@@ -1,18 +1,14 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import styled from 'styled-components'
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import LangSelector from "../components/languageSelector"
-import { rhythm } from "../utils/typography"
 
 const Info = styled.section`
     height: 100%;
     width: 100%;
 `;
-
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.markdownRemark.frontmatter.title
