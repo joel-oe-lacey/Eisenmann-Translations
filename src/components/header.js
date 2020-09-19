@@ -23,21 +23,19 @@ const StyledHeader = styled.section`
 `;
 
 const StyledHolder = styled.h1`
-  margin: ${props => props.title === "About Us" ? '0' : '100%'};
+  margin: ${props => props.location === "/" ? '0' : '100%'};
 `
 
 //color hardcoded here where it shouldn't be
 const FloatedTitle = styled.h1`
-  // left: ${props => props.title === "About Us" ? '0' : '60%'};
-  margin: ${props => props.title === "About Us" ? '15% 0% 15% 30%' : '15%'};
   font-weight: bold;
-  color: ${props => props.title === "About Us" ? 'black' : 'rgba(0,0,0,0.6)'};
-  position: ${props => props.title === "About Us" ? 'relative' : 'fixed'};
-  // text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff;
-  background: ${props => props.title === "About Us" ? 'none' : 'rgba(51, 51, 51, 1)'};
-  padding: ${rhythm(1)};
   border-radius: 5%;
-  text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+  margin: ${props => props.location === "/" ? '15% 0% 15% 30%' : '15%'};
+  color: ${props => props.location === "/" ? 'black' : 'rgba(198, 40, 40, 0.6)'};
+  position: ${props => props.location === "/" ? 'relative' : 'fixed'};
+  background: ${props => props.location === "/" ? 'none' : 'rgba(51, 51, 51, 1)'};
+  padding: ${rhythm(1)};
+  text-shadow: ${props => props.location === "/" ? '0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff' : '0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1)'};
 `;
 
 const Logo = styled.section`
@@ -59,17 +57,17 @@ const Backdrop = styled(Image)({
   objectFit: 'cover'
 });
 
-const FetchHeader = ({title, data}) => { 
+const FetchHeader = ({location, title, data}) => { 
   return (
     <StyledHeader>
-      {title === "About Us" ? <Logo /> : <Backdrop fluid={data.background.childImageSharp.fluid} style={{position: 'absolute'}}/>}
-      <FloatedTitle title={title}>{title}</FloatedTitle>
-      <StyledHolder title={title}/>
+      {location === "/" ? <Logo /> : <Backdrop fluid={data.background.childImageSharp.fluid} style={{position: 'absolute'}}/>}
+      <FloatedTitle location={location}>{title}</FloatedTitle>
+      <StyledHolder location={location}/>
     </StyledHeader>
   )
 }
 
-const Header = ({ title }) => {
+const Header = ({ location, title }) => {
     return (
     <StaticQuery
       query={graphql`
@@ -83,7 +81,7 @@ const Header = ({ title }) => {
           }
         }
       `}
-      render={data => <FetchHeader title={title} data={data} />}
+      render={data => <FetchHeader location={location.pathname} title={title} data={data} />}
     />
   )
 }
