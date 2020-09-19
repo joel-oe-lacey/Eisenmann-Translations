@@ -4,9 +4,14 @@ import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import {
+  rhythm
+} from "../utils/typography"
+
 const Info = styled.section`
     height: 100%;
     width: 100%;
+    padding: ${rhythm(2.5)};
 `;
 
 const BlogIndex = ({ data, location }) => {
@@ -30,7 +35,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
+    markdownRemark(frontmatter: { category: { eq: "Landing" } }) {
       id
       excerpt(pruneLength: 160)
       html

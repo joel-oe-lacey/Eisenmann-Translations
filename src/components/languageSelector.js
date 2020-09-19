@@ -4,7 +4,6 @@ import {
   StaticQuery
 } from "gatsby"
 import styled from 'styled-components'
-// import { styled } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -18,8 +17,7 @@ const Wrapper = styled(List)({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    overflow: 'scroll',
-    marginBottom: '2rem'
+    overflow: 'scroll'
 })
 
 const FetchSelector = ({ data }) => { 
@@ -35,7 +33,7 @@ const FetchSelector = ({ data }) => {
                 return (
                 <Link to={slug}>
                     <ListItem button key={title}>
-                        <ListItemText primary={title} />
+                        <ListItemText inset={true} primary={title} />
                     </ListItem>
                 </Link>
                 )

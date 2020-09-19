@@ -5,19 +5,25 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import LangSelector from "../components/languageSelector"
 
+import {
+  rhythm
+} from "../utils/typography"
+
 const Info = styled.section`
     height: 100%;
     width: 100%;
+    padding: ${rhythm(2.5)};
 `;
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.markdownRemark.frontmatter.title
   const post = data.markdownRemark
+  const category = post.frontmatter.category
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      {post.frontmatter.category === "Languages" && <LangSelector />}
+      {category === "Languages" && <LangSelector />}
       <Info dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )

@@ -17,9 +17,9 @@ import {
 } from '@material-ui/styles';
 import red from '@material-ui/core/colors/red';
 
-import {
-  rhythm
-} from "../utils/typography"
+// import {
+//   rhythm
+// } from "../utils/typography"
 
 const theme = createMuiTheme({
   palette: {
@@ -30,14 +30,15 @@ const theme = createMuiTheme({
 const GlobalStyle = createGlobalStyle`
   body, 
   html,
-  #___gatsby {
+  #___gatsby,
+  #gatsby-focus-wrapper {
     height: 100%;
     width: 100%;
   }
 `
 const Wrapper = styled.section`
     height: 100vh;
-    // width: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
 `;
@@ -45,7 +46,6 @@ const Wrapper = styled.section`
 const StyledBody = styled.main`
     height: min-content;
     width: 100%;
-    padding: ${rhythm(2.5)};
     background: white;
 `;
 
@@ -62,7 +62,7 @@ const Layout = ({ location, title, children }) => {
       <Wrapper>
         <GlobalStyle />
         <Nav/>
-        <Header title={title}/>
+        <Header location={location} title={title}/>
         <StyledBody>{children}</StyledBody>
         <Footer/>
         <Link to="/about/prices">
