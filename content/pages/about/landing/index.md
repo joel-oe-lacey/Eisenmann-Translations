@@ -1,7 +1,7 @@
 ---
-title: Landing
+title: Quality Translations, 25 Years Experience
 type: pages
-category: About
+category: Landing
 description: "About the Eisenmann Übersetzungsteam team."
 ---
 

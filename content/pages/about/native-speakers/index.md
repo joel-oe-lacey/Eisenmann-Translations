@@ -2,7 +2,9 @@
 title: Native Speakers
 type: pages
 category: About
+categoryIndex: 1
 description: "About the Eisenmann Übersetzungsteam team."
+linkDisplay: true
 ---
 
 ## Native Speakers

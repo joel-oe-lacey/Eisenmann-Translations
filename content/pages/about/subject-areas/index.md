@@ -2,7 +2,9 @@
 title: Subject Areas
 type: pages
 category: About
+categoryIndex: 1
 description: "Subject areas we've worked in."
+linkDisplay: true
 ---
 
 ## Law, Economics, Medicine, Technology, IT…

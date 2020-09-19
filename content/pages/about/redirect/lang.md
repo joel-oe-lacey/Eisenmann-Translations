@@ -2,7 +2,9 @@
 title: Language
 type: pages
 category: About
+categoryIndex: 1
 redirectLink: /lang/english/
+linkDisplay: true
 ---
 
 A redirect example file.

@@ -1,8 +1,10 @@
 ---
 title: Prices
 type: pages
-category: About
+category: Contact
+categoryIndex: 2
 description: "About our prices."
+linkDisplay: true
 ---
 
 ## Prices

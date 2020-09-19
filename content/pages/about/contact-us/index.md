@@ -1,8 +1,10 @@
 ---
 title: Contact Us
 type: pages
-category: About
+category: Contact
+categoryIndex: 2
 description: "Contact us."
+linkDisplay: true
 --- 
 
 ## Legal

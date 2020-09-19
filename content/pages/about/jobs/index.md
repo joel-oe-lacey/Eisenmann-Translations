@@ -1,8 +1,10 @@
 ---
 title: Jobs
 type: pages
-category: About
+category: Contact
+categoryIndex: 2
 description: "About our job listings."
+linkDisplay: true
 ---
 
 ## We’re Looking For…
