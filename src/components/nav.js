@@ -118,10 +118,12 @@ const Nav = () => {
           }
           allMarkdownRemark(filter: {
               frontmatter: {
-                category: {
-                  eq: "About"
+                linkDisplay: {
+                  eq: true
                 }
               }
+            }, sort: {
+            fields: frontmatter___categoryIndex
             }) {
             edges {
               node {
