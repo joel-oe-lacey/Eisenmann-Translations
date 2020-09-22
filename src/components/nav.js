@@ -9,11 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import MenuIcon from '@material-ui/icons/Menu';
-import Fab from '@material-ui/core/Fab';
-import {
-  changeLocale
-} from "gatsby-plugin-intl"
-
+import LangSelector from './LangSelector';
 
 const StyledNav = styled.nav`
     height: 10%;
@@ -32,10 +28,6 @@ const HomeLink = styled.h2`
   text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff;
   color: black;
 `
-
-const StyledFAB = styled(Fab)({
-  marginLeft: 'calc(45% + 10rem)'
-});
 
 const FetchNav = ({ data }) => { 
   const [triggered, setTrigger] = useState(false);
@@ -107,12 +99,10 @@ const FetchNav = ({ data }) => {
         <Link to='/'>
           <HomeLink>Eisenmann Translation</HomeLink>
         </Link>
-        <StyledFAB variant="extended" color="secondary" aria-label="change lang" onClick={changeLocale('de')}>
-          Lang
-        </StyledFAB>
         <Drawer anchor='left' open={triggered} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
+        <LangSelector />
       </React.Fragment>
     </StyledNav>
   )
