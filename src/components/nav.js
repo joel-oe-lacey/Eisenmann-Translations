@@ -9,6 +9,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import MenuIcon from '@material-ui/icons/Menu';
+import Fab from '@material-ui/core/Fab';
+import {
+  changeLocale
+} from "gatsby-plugin-intl"
+
 
 const StyledNav = styled.nav`
     height: 10%;
@@ -28,9 +33,13 @@ const HomeLink = styled.h2`
   color: black;
 `
 
+const StyledFAB = styled(Fab)({
+  marginLeft: 'calc(45% + 10rem)'
+});
+
 const FetchNav = ({ data }) => { 
   const [triggered, setTrigger] = useState(false);
-
+ 
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -98,6 +107,9 @@ const FetchNav = ({ data }) => {
         <Link to='/'>
           <HomeLink>Eisenmann Translation</HomeLink>
         </Link>
+        <StyledFAB variant="extended" color="secondary" aria-label="change lang" onClick={changeLocale('de')}>
+          Lang
+        </StyledFAB>
         <Drawer anchor='left' open={triggered} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
