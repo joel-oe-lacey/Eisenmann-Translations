@@ -3,6 +3,7 @@ title: Danish
 type: pages
 category: Languages
 description: "About our Danish translations."
+locale: de
 ---
 
 ## Dänisch-Übersetzungen für Recht und Wirtschaft

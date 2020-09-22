@@ -3,6 +3,7 @@ title: Chinese
 type: pages
 category: Languages
 description: "About our Chinese translations."
+locale: en
 ---
 
 ## Chinese

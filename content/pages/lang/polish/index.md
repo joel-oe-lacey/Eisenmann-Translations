@@ -3,6 +3,7 @@ title: Polish
 type: pages
 category: Languages
 description: "About our Polish translations."
+locale: en
 ---
 
 ## Polish

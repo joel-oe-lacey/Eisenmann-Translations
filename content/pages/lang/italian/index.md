@@ -3,6 +3,7 @@ title: Italian
 type: pages
 category: Languages
 description: "About our Italian translations."
+locale: en
 ---
 ## Italian
 

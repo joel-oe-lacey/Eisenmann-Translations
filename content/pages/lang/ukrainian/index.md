@@ -3,6 +3,7 @@ title: Ukrainian
 type: pages
 category: Languages
 description: "About our Ukrainian translations."
+locale: en
 ---
 
 ## Ukrainian

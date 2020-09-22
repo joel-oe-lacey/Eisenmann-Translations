@@ -3,6 +3,7 @@ title: Croatian and Serbian
 type: pages
 category: Languages
 description: "About our Croatian and Serbian translations."
+locale: de
 ---
 
 ## Kroatisch und Serbisch - Übersetzung

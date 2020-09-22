@@ -3,6 +3,7 @@ title: Spanish
 type: pages
 category: Languages
 description: "About our Spanish translations."
+locale: en
 ---
 ## Spanish
 

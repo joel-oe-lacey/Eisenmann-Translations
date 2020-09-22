@@ -3,6 +3,7 @@ title: Indonesian
 type: pages
 category: Languages
 description: "About our Indonesian translations."
+locale: en
 ---
 
 ## Indonesian

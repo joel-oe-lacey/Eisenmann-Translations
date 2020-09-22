@@ -3,6 +3,7 @@ title: Russian
 type: pages
 category: Languages
 description: "About our Russian translations."
+locale: de
 ---
 ## Russisch-Übersetzungen - Verträge, Geburtsurkunden...
 Sprachrichtungen für Übersetzungen:

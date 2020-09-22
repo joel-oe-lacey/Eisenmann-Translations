@@ -3,6 +3,7 @@ title: Quality Translations, 25 Years Experience
 type: pages
 category: Landing
 description: "About the Eisenmann Übersetzungsteam team."
+locale: en
 ---
 
 ## Translators of German, English and Other Languages – Translators for German, English, French, Spanish, Italian

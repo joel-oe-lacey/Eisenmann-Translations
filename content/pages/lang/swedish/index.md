@@ -3,6 +3,7 @@ title: Swedish
 type: pages
 category: Languages
 description: "About our Swedish translations."
+locale: en
 ---
 
 ## Swedish

@@ -3,6 +3,7 @@ title: Vietnamese
 type: pages
 category: Languages
 description: "About our Vietnamese translations."
+locale: en
 ---
 
 ## Vietnamese

@@ -3,6 +3,7 @@ title: Japanese
 type: pages
 category: Languages
 description: "About our Japanese translations."
+locale: en
 ---
 ## Japanese
 

@@ -5,6 +5,7 @@ category: Contact
 categoryIndex: 2
 description: "Contact us."
 linkDisplay: true
+locale: de
 --- 
 
 # Impressum von fachuebersetzungen.de

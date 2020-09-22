@@ -3,6 +3,7 @@ title: Japanese
 type: pages
 category: Languages
 description: "About our Japanese translations."
+locale: de
 ---
 ## Japanisch-Übersetzungen von Verträgen, Bilanzen...
 Sprachrichtung für Japanisch-Übersetzungen:

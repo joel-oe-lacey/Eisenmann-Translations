@@ -3,6 +3,7 @@ title: Romanian
 type: pages
 category: Languages
 description: "About our Romanian translations."
+locale: de
 ---
 ## Rumänisch-Übersetzungen - Recht, Technik, Medizin...
 Sprachrichtungen für Übersetzungen:

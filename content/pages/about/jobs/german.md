@@ -5,6 +5,7 @@ category: Contact
 categoryIndex: 2
 description: "About our job listings."
 linkDisplay: true
+locale: de
 ---
 
 # Praktikant/in der Übersetzungswissenschaften

@@ -3,6 +3,7 @@ title: Slovenian
 type: pages
 category: Languages
 description: "About our Slovenian translations."
+locale: en
 ---
 
 ## Slovenian

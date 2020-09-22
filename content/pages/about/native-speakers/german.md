@@ -5,6 +5,7 @@ category: About
 categoryIndex: 1
 description: "About the Eisenmann Übersetzungsteam team."
 linkDisplay: true
+locale: de
 ---
 
 # Muttersprachler-Übersetzungen

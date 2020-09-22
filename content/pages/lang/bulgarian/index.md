@@ -3,6 +3,7 @@ title: Bulgarian
 type: pages
 category: Languages
 description: "About our Bulgarian translations."
+locale: en
 ---
 
 ## Bulgarian

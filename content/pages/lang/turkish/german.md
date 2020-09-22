@@ -3,6 +3,7 @@ title: Turkish
 type: pages
 category: Languages
 description: "About our Turkish translations."
+locale: de
 ---
 
 ## Türkisch

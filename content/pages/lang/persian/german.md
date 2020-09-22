@@ -3,6 +3,7 @@ title: Persian
 type: pages
 category: Languages
 description: "About our Persian translations."
+locale: de
 ---
 ## Persisch / Farsi / Dari / Iranisch-Übersetzung
 Sprachrichtungen für Persisch-Übersetzungen:

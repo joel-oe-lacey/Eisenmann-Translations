@@ -3,6 +3,7 @@ title: Arabic
 type: pages
 category: Languages
 description: "About our Arabic translations."
+locale: de
 ---
 
 ## Arabisch

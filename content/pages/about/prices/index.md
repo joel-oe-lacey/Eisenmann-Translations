@@ -5,6 +5,7 @@ category: Contact
 categoryIndex: 2
 description: "About our prices."
 linkDisplay: true
+locale: en
 ---
 
 ## Prices

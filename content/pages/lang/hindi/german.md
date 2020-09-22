@@ -3,6 +3,7 @@ title: Hindi
 type: pages
 category: Languages
 description: "About our Hindi translations."
+locale: de
 ---
 
 ## Hindi-Übersetzungen

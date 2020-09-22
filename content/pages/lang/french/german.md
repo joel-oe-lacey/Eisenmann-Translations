@@ -3,6 +3,7 @@ title: French
 type: pages
 category: Languages
 description: "About our French translations."
+locale: de
 ---
 ## Französisch-Übersetzungen
 Wir übersetzen - seit 1990 - neben Englisch auch Französisch. Die Sprachrichtungen für Französisch-Übersetzungen sind:

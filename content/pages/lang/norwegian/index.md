@@ -3,6 +3,7 @@ title: Norwegian
 type: pages
 category: Languages
 description: "About our Norwegian translations."
+locale: en
 ---
 
 ## Norwegian

@@ -3,6 +3,7 @@ title: Latvian, Lithuanian, Estonian
 type: pages
 category: Languages
 description: "About our Latvian, Lithuanian, and Estonian translations."
+locale: en
 ---
 
 ## Latvian, Lithuanian, Estonian

@@ -5,6 +5,7 @@ category: About
 categoryIndex: 1
 description: "Subject areas we've worked in."
 linkDisplay: true
+locale: de
 ---
 
 # Recht, Wirtschaft, Medizin, Technik, EDV...

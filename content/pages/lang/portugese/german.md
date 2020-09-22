@@ -3,6 +3,7 @@ title: Portugese
 type: pages
 category: Languages
 description: "About our Portugese translations."
+locale: de
 ---
 
 ## Portugiesisch-Übersetzungen, Verträge, Zeugnisse ...

@@ -3,6 +3,7 @@ title: Dutch
 type: pages
 category: Languages
 description: "About our Dutch translations."
+locale: de
 ---
 
 ## Deutsch - Übersetzer-Sprache Nummer Eins

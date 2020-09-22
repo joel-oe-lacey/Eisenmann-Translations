@@ -3,6 +3,7 @@ title: Danish
 type: pages
 category: Languages
 description: "About our Danish translations."
+locale: en
 ---
 
 ## Danish

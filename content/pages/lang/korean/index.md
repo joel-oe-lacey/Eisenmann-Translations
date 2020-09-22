@@ -3,6 +3,7 @@ title: Korean
 type: pages
 category: Languages
 description: "About our Korean translations."
+locale: en
 ---
 ## Korean
 

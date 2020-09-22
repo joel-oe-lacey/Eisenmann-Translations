@@ -3,6 +3,7 @@ title: Slovak
 type: pages
 category: Languages
 description: "About our Slovak translations."
+locale: de
 ---
 
 ## Slowakisch-Übersetzungen - Verträge, Technik usw.

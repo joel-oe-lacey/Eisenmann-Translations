@@ -4,6 +4,7 @@ type: pages
 category: About
 categoryIndex: 1
 description: "About the Eisenmann Übersetzungsteam team."
+locale: de
 ---
 
 # Hintergrundinformationen zum Übersetzungsbüro

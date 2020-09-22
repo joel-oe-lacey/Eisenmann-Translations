@@ -3,6 +3,7 @@ title: English
 type: pages
 category: Languages
 description: "About our English translations."
+locale: de
 ---
 ## Englisch-Übersetzungen, seit 1990, auch beglaubigt  
 ### Sprachrichtungen für Englisch-Übersetzer

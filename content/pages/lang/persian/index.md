@@ -3,6 +3,7 @@ title: Persian
 type: pages
 category: Languages
 description: "About our Persian translations."
+locale: en
 ---
 
 ## Persian/Farsi/Iranian/Dari

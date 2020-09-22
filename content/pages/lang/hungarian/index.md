@@ -3,6 +3,7 @@ title: Hungarian
 type: pages
 category: Languages
 description: "About our Hungarian translations."
+locale: en
 ---
 
 ## Hungarian

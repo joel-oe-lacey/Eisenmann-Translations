@@ -3,6 +3,7 @@ title: Greek
 type: pages
 category: Languages
 description: "About our Greek translations."
+locale: en
 ---
 
 ## Greek

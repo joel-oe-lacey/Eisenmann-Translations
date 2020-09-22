@@ -3,6 +3,7 @@ title: French
 type: pages
 category: Languages
 description: "About our French translations."
+locale: en
 ---
 ## French
 
