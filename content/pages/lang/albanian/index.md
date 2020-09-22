@@ -3,6 +3,7 @@ title: Albanian
 type: pages
 category: Languages
 description: "About our Albanian translations."
+locale: en
 ---
 
 ## Albanian
