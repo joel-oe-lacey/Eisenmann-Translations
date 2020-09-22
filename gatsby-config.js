@@ -15,6 +15,19 @@ module.exports = {
   plugins: [
     'gatsby-theme-material-ui',
     {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`en`, `de`],
+        // language file path
+        defaultLanguage: `en`,
+        // option to redirect to `/de` when connecting `/`
+        redirect: false,
+      }
+    },
+    {
       resolve: 'gatsby-plugin-tinacms',
       options: {
         // The CMS will be disabled on your production site
