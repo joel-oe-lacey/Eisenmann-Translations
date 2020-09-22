@@ -3,7 +3,10 @@ import { graphql } from "gatsby"
 import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import LangSelector from "../components/languageSelector"
+import LangInfoSelector from "../components/langInfoSelector"
+import {
+  useIntl
+} from "gatsby-plugin-intl"
 
 import {
   rhythm
@@ -19,11 +22,13 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.markdownRemark.frontmatter.title
   const post = data.markdownRemark
   const category = post.frontmatter.category
+  const intl = useIntl()
+  console.log('lang', intl)
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      {category === "Languages" && <LangSelector />}
+      {category === "Languages" && <LangInfoSelector />}
       <Info dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
