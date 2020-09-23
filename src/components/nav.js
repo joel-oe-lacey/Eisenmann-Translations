@@ -46,10 +46,11 @@ const FetchNav = ({ data }) => {
 
   const postsByCategory = data.allMarkdownRemark.edges.reduce((groupPosts, { node }) => {
     const category = node.frontmatter.category ? node.frontmatter.category : 'none';
+    const markdownLocale = node.frontmatter.locale;
 
-    if (!groupPosts[category]) {
+    if (!groupPosts[category] && markdownLocale === locale) {
       groupPosts[category] = [node]
-    } else {
+    } else if (markdownLocale === locale) {
       groupPosts[category].push(node)
     }
 
@@ -144,6 +145,7 @@ const Nav = () => {
                   type
                   category
                   redirectLink
+                  locale
                 }
               }
             }

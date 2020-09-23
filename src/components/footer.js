@@ -11,6 +11,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
+import {
+  useIntl
+} from "gatsby-plugin-intl"
 // import TableFooter from '@material-ui/core/TableFooter';
 
 // const StyledFooter = styled(TableFooter)({
@@ -68,12 +71,17 @@ const Legal = styled.section`
 `;
 
 const FetchFooter = ({ data }) => { 
+  const {
+    locale
+  } = useIntl();
+
   const postsByCategory = data.allMarkdownRemark.edges.reduce((groupPosts, { node }) => {
     const category = node.frontmatter.category ? node.frontmatter.category : 'none';
+    const markdownLocale = node.frontmatter.locale;
 
-    if (!groupPosts[category]) {
+    if (!groupPosts[category] && markdownLocale === locale) {
       groupPosts[category] = [node]
-    } else {
+    } else if (markdownLocale === locale) {
       groupPosts[category].push(node)
     }
 
@@ -164,6 +172,7 @@ const Footer = () => {
                   type
                   category
                   redirectLink
+                  locale
                 }
               }
             }
