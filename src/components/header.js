@@ -58,9 +58,11 @@ const Backdrop = styled(Image)({
 });
 
 const FetchHeader = ({location, title, data}) => { 
+  const rootPath = `${__PATH_PREFIX__}/`
+
   return (
     <StyledHeader>
-      {location === "/" ? <Logo /> : <Backdrop fluid={data.background.childImageSharp.fluid} style={{position: 'absolute'}}/>}
+      {location === rootPath ? <Logo /> : <Backdrop fluid={data.background.childImageSharp.fluid} style={{position: 'absolute'}}/>}
       <FloatedTitle location={location}>{title}</FloatedTitle>
       <StyledHolder location={location}/>
     </StyledHeader>
