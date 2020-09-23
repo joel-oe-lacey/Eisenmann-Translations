@@ -1,8 +1,8 @@
 ---
-title: Chinese
+title: Chinesisch
 type: pages
 category: Languages
-description: "About our Chinese translations."
+description: "Chinesisch"
 locale: de
 ---
 

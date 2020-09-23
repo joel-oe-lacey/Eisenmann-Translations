@@ -1,9 +1,9 @@
 ---
-title: Native Speakers
+title: Muttersprachler-Übersetzungen
 type: pages
 category: About
 categoryIndex: 1
-description: "About the Eisenmann Übersetzungsteam team."
+description: "Muttersprachler-Übersetzungen."
 linkDisplay: true
 locale: de
 ---

@@ -1,9 +1,9 @@
 ---
 title: Jobs
 type: pages
-category: Contact
+category: Kontakt
 categoryIndex: 2
-description: "About our job listings."
+description: "Wir suchen..."
 linkDisplay: true
 locale: de
 ---

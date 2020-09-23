@@ -1,8 +1,8 @@
 ---
-title: Portugese
+title: Portugiesisch
 type: pages
 category: Languages
-description: "About our Portugese translations."
+description: "Portugiesisch"
 locale: de
 ---
 

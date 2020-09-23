@@ -1,8 +1,8 @@
 ---
-title: Albanian
+title: Albanisch
 type: pages
 category: Languages
-description: "About our Albanian translations."
+description: "Albanisch"
 locale: de
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: Dutch
+title: Deutsch
 type: pages
 category: Languages
-description: "About our Dutch translations."
+description: "Deutsch"
 locale: de
 ---
 

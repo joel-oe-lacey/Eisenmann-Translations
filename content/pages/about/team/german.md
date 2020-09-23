@@ -1,9 +1,9 @@
 ---
-title: About Us
+title: Über uns
 type: pages
 category: About
 categoryIndex: 1
-description: "About the Eisenmann Übersetzungsteam team."
+description: "Über uns."
 locale: de
 ---
 

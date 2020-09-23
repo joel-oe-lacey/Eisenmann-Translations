@@ -1,8 +1,8 @@
 ---
-title: Ukrainian
+title: Ukrainisch
 type: pages
 category: Languages
-description: "About our Ukrainian translations."
+description: "Ukrainisch"
 locale: de
 ---
 

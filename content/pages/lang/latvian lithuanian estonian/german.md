@@ -1,8 +1,8 @@
 ---
-title: Latvian, Lithuanian, Estonian
+title: Lettisch, Litauisch, Estnisch
 type: pages
 category: Languages
-description: "About our Latvian, Lithuanian, and Estonian translations."
+description: "Lettisch, Litauisch, Estnisch"
 locale: de
 ---
 

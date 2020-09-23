@@ -1,8 +1,8 @@
 ---
-title: Japanese
+title: Japanisch
 type: pages
 category: Languages
-description: "About our Japanese translations."
+description: "Japanisch"
 locale: de
 ---
 ## Japanisch-Übersetzungen von Verträgen, Bilanzen...

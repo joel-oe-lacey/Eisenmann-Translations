@@ -1,8 +1,8 @@
 ---
-title: Norwegian
+title: Norwegisch
 type: pages
 category: Languages
-description: "About our Norwegian translations."
+description: "Norwegisch"
 locale: de
 ---
 ## Norwegisch

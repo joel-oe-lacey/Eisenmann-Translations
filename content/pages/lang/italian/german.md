@@ -1,8 +1,8 @@
 ---
-title: Italian
+title: Italienisch
 type: pages
 category: Languages
-description: "About our Italian translations."
+description: "Italienisch"
 locale: de
 ---
 ## Italienisch-Übersetzung von juristischen Texten - IT

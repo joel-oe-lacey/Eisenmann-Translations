@@ -1,9 +1,9 @@
 ---
-title: Impressum von fachuebersetzungen.de
+title: Kontakt
 type: pages
-category: Contact
+category: Kontakt
 categoryIndex: 2
-description: "Contact us."
+description: "Kontakt"
 linkDisplay: true
 locale: de
 --- 

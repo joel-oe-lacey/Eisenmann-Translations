@@ -1,8 +1,8 @@
 ---
-title: Turkish
+title: Türkisch
 type: pages
 category: Languages
-description: "About our Turkish translations."
+description: "Türkisch"
 locale: de
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: English
+title: Englisch
 type: pages
 category: Languages
-description: "About our English translations."
+description: "Englisch"
 locale: de
 ---
 ## Englisch-Übersetzungen, seit 1990, auch beglaubigt  

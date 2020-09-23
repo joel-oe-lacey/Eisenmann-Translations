@@ -1,8 +1,8 @@
 ---
-title: Slovak
+title: Slowakisch
 type: pages
 category: Languages
-description: "About our Slovak translations."
+description: "Slowakisch"
 locale: de
 ---
 

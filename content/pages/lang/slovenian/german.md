@@ -1,8 +1,8 @@
 ---
-title: Slovenian
+title: Slowenisch
 type: pages
 category: Languages
-description: "About our Slovenian translations."
+description: "Slowenisch"
 locale: de
 ---
 

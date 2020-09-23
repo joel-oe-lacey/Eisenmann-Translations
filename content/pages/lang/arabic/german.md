@@ -1,8 +1,8 @@
 ---
-title: Arabic
+title: Arabisch
 type: pages
 category: Languages
-description: "About our Arabic translations."
+description: "Arabisch"
 locale: de
 ---
 

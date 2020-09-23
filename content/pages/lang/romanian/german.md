@@ -1,8 +1,8 @@
 ---
-title: Romanian
+title: Rumänisch
 type: pages
 category: Languages
-description: "About our Romanian translations."
+description: "Rumänisch"
 locale: de
 ---
 ## Rumänisch-Übersetzungen - Recht, Technik, Medizin...

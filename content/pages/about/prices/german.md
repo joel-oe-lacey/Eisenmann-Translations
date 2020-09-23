@@ -1,9 +1,9 @@
 ---
-title: Prices
+title: Preise
 type: pages
-category: Contact
+category: Kontakt
 categoryIndex: 2
-description: "About our prices."
+description: "Zeilenpreise unserer Übersetzungen."
 linkDisplay: true
 locale: de
 ---

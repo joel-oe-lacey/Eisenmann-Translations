@@ -1,8 +1,8 @@
 ---
-title: Spanish
+title: Spanische
 type: pages
 category: Languages
-description: "About our Spanish translations."
+description: "Spanische"
 locale: de
 ---
 

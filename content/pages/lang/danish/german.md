@@ -1,8 +1,8 @@
 ---
-title: Danish
+title: Dänisch
 type: pages
 category: Languages
-description: "About our Danish translations."
+description: "Dänisch"
 locale: de
 ---
 

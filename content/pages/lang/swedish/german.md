@@ -1,8 +1,8 @@
 ---
-title: Swedish
+title: Schwedisch
 type: pages
 category: Languages
-description: "About our Swedish translations."
+description: "Schwedisch"
 locale: de
 ---
 

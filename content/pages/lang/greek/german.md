@@ -1,8 +1,8 @@
 ---
-title: Greek
+title: Griechisch
 type: pages
 category: Languages
-description: "About our Greek translations."
+description: "Griechisch"
 locale: de
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: Quality Translations, 25 Years Experience
+title: Übersetzer-Erfahrung von über 25 Jahren
 type: pages
 category: Landing
-description: "About the Eisenmann Übersetzungsteam team."
+description: "Übersetzer-Erfahrung von über 25 Jahren."
 locale: de
 ---
 

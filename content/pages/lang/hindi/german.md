@@ -2,7 +2,7 @@
 title: Hindi
 type: pages
 category: Languages
-description: "About our Hindi translations."
+description: "Hindi"
 locale: de
 ---
 

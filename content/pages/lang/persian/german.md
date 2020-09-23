@@ -1,8 +1,8 @@
 ---
-title: Persian
+title: Persisch
 type: pages
 category: Languages
-description: "About our Persian translations."
+description: "Persisch"
 locale: de
 ---
 ## Persisch / Farsi / Dari / Iranisch-Übersetzung

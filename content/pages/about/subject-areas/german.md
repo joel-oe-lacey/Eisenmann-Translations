@@ -1,9 +1,9 @@
 ---
-title: Subject Areas
+title: Fachgebiete
 type: pages
 category: About
 categoryIndex: 1
-description: "Subject areas we've worked in."
+description: "Fachgebiete."
 linkDisplay: true
 locale: de
 ---

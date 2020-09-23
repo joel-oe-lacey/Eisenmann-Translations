@@ -1,8 +1,8 @@
 ---
-title: French
+title: Französisch
 type: pages
 category: Languages
-description: "About our French translations."
+description: "Französisch"
 locale: de
 ---
 ## Französisch-Übersetzungen

@@ -1,8 +1,8 @@
 ---
-title: Vietnamese
+title: Vietnamesisch
 type: pages
 category: Languages
-description: "About our Vietnamese translations."
+description: "Vietnamesisch"
 locale: de
 ---
 

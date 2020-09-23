@@ -1,8 +1,8 @@
 ---
-title: Hungarian
+title: Ungarisch
 type: pages
 category: Languages
-description: "About our Hungarian translations."
+description: "Ungarisch"
 locale: de
 ---
 

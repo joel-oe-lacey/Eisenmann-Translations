@@ -1,8 +1,8 @@
 ---
-title: Korean
+title: Koreanisch
 type: pages
 category: Languages
-description: "About our Korean translations."
+description: "Koreanisch"
 locale: de
 ---
 ## Koreanisch-Übersetzer

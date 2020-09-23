@@ -1,8 +1,8 @@
 ---
-title: Croatian and Serbian
+title: Kroatisch und Serbisch
 type: pages
 category: Languages
-description: "About our Croatian and Serbian translations."
+description: "Kroatisch und Serbisch"
 locale: de
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: Polish
+title: Polnisch
 type: pages
 category: Languages
-description: "About our Polish translations."
+description: "Polnisch"
 locale: de
 ---
 

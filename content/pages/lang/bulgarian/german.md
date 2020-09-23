@@ -1,8 +1,8 @@
 ---
-title: Bulgarian
+title: Bulgarisch
 type: pages
 category: Languages
-description: "About our Bulgarian translations."
+description: "Bulgarisch"
 locale: de
 ---
 

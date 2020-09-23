@@ -1,8 +1,8 @@
 ---
-title: Finnish
+title: Finnisch
 type: pages
 category: Languages
-description: "About our Finnish translations."
+description: "Finnisch"
 locale: de
 ---
 

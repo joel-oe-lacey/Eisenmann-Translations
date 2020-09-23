@@ -1,8 +1,8 @@
 ---
-title: Indonesian
+title: Indonesisch
 type: pages
 category: Languages
-description: "About our Indonesian translations."
+description: "Indonesisch"
 locale: de
 ---
 

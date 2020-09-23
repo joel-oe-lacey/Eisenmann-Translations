@@ -1,8 +1,8 @@
 ---
-title: Russian
+title: Russisch
 type: pages
 category: Languages
-description: "About our Russian translations."
+description: "Russisch"
 locale: de
 ---
 ## Russisch-Übersetzungen - Verträge, Geburtsurkunden...
