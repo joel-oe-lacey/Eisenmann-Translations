@@ -10,6 +10,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import MenuIcon from '@material-ui/icons/Menu';
 import LangSelector from './LangSelector';
+import {
+  useIntl
+} from "gatsby-plugin-intl"
 
 const StyledNav = styled.nav`
     height: 10%;
@@ -31,7 +34,8 @@ const HomeLink = styled.h2`
 
 const FetchNav = ({ data }) => { 
   const [triggered, setTrigger] = useState(false);
- 
+  const { locale } = useIntl();
+  
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -109,9 +113,11 @@ const FetchNav = ({ data }) => {
 }
 
 const Nav = () => {
+
     return (
     <StaticQuery
-      query={graphql`
+      query = {
+        graphql`
         query {
           site {
             siteMetadata {
