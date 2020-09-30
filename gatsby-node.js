@@ -1,13 +1,31 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const trimPath = str => {
+  const lastDirectoryIndex = str.lastIndexOf('/') + 1;
+  const trimCount = -(str.length - lastDirectoryIndex);
+
+  return str.slice(0, trimCount)
+}
+
+const groupMarkdownByPath = markdown => {
+  return markdown.reduce((pagesByPath, {
+    node
+  }) => {
+    const path = trimPath(node.fileAbsolutePath);
+
+    if (!pagesByPath[path]) {
+      pagesByPath[path] = [node]
+    } else {
+      pagesByPath[path].push(node)
+    }
+
+    return pagesByPath;
+  }, {})
+}
+
+
 exports.createPages = async ({ graphql, actions }) => {
-  //create collections  
-  //then create different prev next for each
-  //can all be under same createPages render?
-
-  //worry about sorting later
-
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
@@ -24,9 +42,13 @@ exports.createPages = async ({ graphql, actions }) => {
               fields {
                 slug
               }
+              fileAbsolutePath
+              html
               frontmatter {
                 title
                 type
+                category
+                locale
               }
             }
           }
@@ -39,13 +61,17 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors
   }
 
-  // Create blog posts pages.
+  // // Create blog posts pages.
   const posts = result.data.allMarkdownRemark.edges
+  const markdownGroupedByPath = groupMarkdownByPath(posts)
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
     const type = post.node.frontmatter.type
+
+    const groupPath = trimPath(post.node.fileAbsolutePath);
+    const pairedPosts = markdownGroupedByPath[groupPath]
 
     if (type === 'pages') {
       createPage({
@@ -53,6 +79,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: sitePages,
         context: {
           slug: post.node.fields.slug,
+          versions: pairedPosts,
           previous,
           next,
         },
@@ -63,6 +90,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
+          versions: pairedPosts,
           previous,
           next,
         },
@@ -76,6 +104,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
+    
     createNodeField({
       name: `slug`,
       node,
