@@ -6,6 +6,7 @@ categoryIndex: 2
 description: "Contact us."
 linkDisplay: true
 locale: en
+slug: "/contact/contact-us/"
 --- 
 
 ## Legal
