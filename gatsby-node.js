@@ -15,9 +15,9 @@ const groupMarkdownByPath = markdown => {
     const path = trimPath(node.fileAbsolutePath);
 
     if (!pagesByPath[path]) {
-      pagesByPath[path] = [node]
+      pagesByPath[path] = { [node.frontmatter.locale] : node }
     } else {
-      pagesByPath[path].push(node)
+      pagesByPath[path][node.frontmatter.locale] = node
     }
 
     return pagesByPath;
