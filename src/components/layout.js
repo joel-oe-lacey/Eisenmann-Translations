@@ -16,10 +16,11 @@ import {
   ThemeProvider
 } from '@material-ui/styles';
 import red from '@material-ui/core/colors/red';
+import {
+  useIntl,
+  FormattedMessage
+} from "gatsby-plugin-intl"
 
-// import {
-//   rhythm
-// } from "../utils/typography"
 
 const theme = createMuiTheme({
   palette: {
@@ -56,7 +57,9 @@ const StyledFAB = styled(Fab)({
   margin: '3rem',
 });
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ intl, location, title, children }) => {
+  const intl = useIntl();
+
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
@@ -67,7 +70,7 @@ const Layout = ({ location, title, children }) => {
         <Footer/>
         <Link to="/about/prices">
           <StyledFAB variant="extended" color="primary" aria-label="contact us">
-            Contact Us
+            {intl.formatMessage({ id: "contact" })}
           </StyledFAB>
         </Link>
       </Wrapper>
