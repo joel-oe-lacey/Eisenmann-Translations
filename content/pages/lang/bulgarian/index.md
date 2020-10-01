@@ -2,6 +2,7 @@
 title: Bulgarian
 type: pages
 category: Languages
+groupingID: 10
 description: "About our Bulgarian translations."
 locale: en
 ---

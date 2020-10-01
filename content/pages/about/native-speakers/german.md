@@ -1,8 +1,8 @@
 ---
 title: Muttersprachler-Übersetzungen
 type: pages
-category: About
-categoryIndex: 1
+category: Über
+groupingID: 4
 description: "Muttersprachler-Übersetzungen."
 linkDisplay: true
 locale: de

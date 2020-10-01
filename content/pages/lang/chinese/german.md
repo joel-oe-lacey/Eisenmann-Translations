@@ -2,6 +2,7 @@
 title: Chinesisch
 type: pages
 category: Languages
+groupingID: 11
 description: "Chinesisch"
 locale: de
 ---

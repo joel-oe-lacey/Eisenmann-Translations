@@ -2,6 +2,7 @@
 title: Lettisch, Litauisch, Estnisch
 type: pages
 category: Languages
+groupingID: 25
 description: "Lettisch, Litauisch, Estnisch"
 locale: de
 ---

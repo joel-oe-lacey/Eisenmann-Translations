@@ -2,6 +2,7 @@
 title: Hungarian
 type: pages
 category: Languages
+groupingID: 20
 description: "About our Hungarian translations."
 locale: en
 ---

@@ -2,6 +2,7 @@
 title: Französisch
 type: pages
 category: Languages
+groupingID: 17
 description: "Französisch"
 locale: de
 ---

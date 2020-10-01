@@ -2,6 +2,7 @@
 title: Ukrainisch
 type: pages
 category: Languages
+groupingID: 36
 description: "Ukrainisch"
 locale: de
 ---

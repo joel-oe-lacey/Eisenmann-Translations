@@ -2,7 +2,7 @@
 title: Language
 type: pages
 category: About
-categoryIndex: 1
+groupingID: 1000
 redirectLink: /lang/english/
 linkDisplay: true
 ---

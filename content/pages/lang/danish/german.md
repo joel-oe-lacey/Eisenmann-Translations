@@ -2,6 +2,7 @@
 title: Dänisch
 type: pages
 category: Languages
+groupingID: 13
 description: "Dänisch"
 locale: de
 ---

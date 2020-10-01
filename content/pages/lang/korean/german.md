@@ -2,6 +2,7 @@
 title: Koreanisch
 type: pages
 category: Languages
+groupingID: 24
 description: "Koreanisch"
 locale: de
 ---

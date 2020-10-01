@@ -2,6 +2,7 @@
 title: Latvian, Lithuanian, Estonian
 type: pages
 category: Languages
+groupingID: 25
 description: "About our Latvian, Lithuanian, and Estonian translations."
 locale: en
 ---

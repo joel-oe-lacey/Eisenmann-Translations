@@ -2,6 +2,7 @@
 title: Schwedisch
 type: pages
 category: Languages
+groupingID: 34
 description: "Schwedisch"
 locale: de
 ---

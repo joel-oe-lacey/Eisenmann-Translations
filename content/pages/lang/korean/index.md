@@ -2,6 +2,7 @@
 title: Korean
 type: pages
 category: Languages
+groupingID: 24
 description: "About our Korean translations."
 locale: en
 ---

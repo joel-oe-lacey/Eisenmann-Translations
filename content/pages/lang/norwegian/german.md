@@ -2,6 +2,7 @@
 title: Norwegisch
 type: pages
 category: Languages
+groupingID: 26
 description: "Norwegisch"
 locale: de
 ---

@@ -1,8 +1,8 @@
 ---
 title: Fachgebiete
 type: pages
-category: About
-categoryIndex: 1
+category: Über
+groupingID: 6
 description: "Fachgebiete."
 linkDisplay: true
 locale: de

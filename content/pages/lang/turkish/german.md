@@ -2,6 +2,7 @@
 title: Türkisch
 type: pages
 category: Languages
+groupingID: 35
 description: "Türkisch"
 locale: de
 ---

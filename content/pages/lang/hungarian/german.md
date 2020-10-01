@@ -2,6 +2,7 @@
 title: Ungarisch
 type: pages
 category: Languages
+groupingID: 20
 description: "Ungarisch"
 locale: de
 ---

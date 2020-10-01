@@ -2,6 +2,7 @@
 title: Portugiesisch
 type: pages
 category: Languages
+groupingID: 29
 description: "Portugiesisch"
 locale: de
 ---

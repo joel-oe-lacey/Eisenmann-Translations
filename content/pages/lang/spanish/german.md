@@ -2,6 +2,7 @@
 title: Spanische
 type: pages
 category: Languages
+groupingID: 33
 description: "Spanische"
 locale: de
 ---

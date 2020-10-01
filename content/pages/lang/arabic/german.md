@@ -2,6 +2,7 @@
 title: Arabisch
 type: pages
 category: Languages
+groupingID: 9
 description: "Arabisch"
 locale: de
 ---

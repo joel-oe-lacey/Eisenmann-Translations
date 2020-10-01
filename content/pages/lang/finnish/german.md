@@ -2,6 +2,7 @@
 title: Finnisch
 type: pages
 category: Languages
+groupingID: 16
 description: "Finnisch"
 locale: de
 ---

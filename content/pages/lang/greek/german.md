@@ -2,6 +2,7 @@
 title: Griechisch
 type: pages
 category: Languages
+groupingID: 18
 description: "Griechisch"
 locale: de
 ---

@@ -2,6 +2,7 @@
 title: Slowakisch
 type: pages
 category: Languages
+groupingID: 31
 description: "Slowakisch"
 locale: de
 ---

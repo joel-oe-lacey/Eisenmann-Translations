@@ -2,6 +2,7 @@
 title: Polnisch
 type: pages
 category: Languages
+groupingID: 28
 description: "Polnisch"
 locale: de
 ---

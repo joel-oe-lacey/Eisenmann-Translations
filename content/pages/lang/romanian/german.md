@@ -2,6 +2,7 @@
 title: Rumänisch
 type: pages
 category: Languages
+groupingID: 30
 description: "Rumänisch"
 locale: de
 ---

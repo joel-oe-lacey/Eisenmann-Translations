@@ -1,8 +1,8 @@
 ---
 title: Über uns
 type: pages
-category: About
-categoryIndex: 1
+category: Über
+groupingID: 7
 description: "Über uns."
 locale: de
 ---

@@ -2,7 +2,7 @@
 title: Kontakt
 type: pages
 category: Kontakt
-groupingID: 2
+groupingID: 1
 description: "Kontakt"
 linkDisplay: true
 locale: de

@@ -2,6 +2,7 @@
 title: Japanisch
 type: pages
 category: Languages
+groupingID: 23
 description: "Japanisch"
 locale: de
 ---

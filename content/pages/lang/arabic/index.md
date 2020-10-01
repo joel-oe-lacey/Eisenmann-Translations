@@ -2,6 +2,7 @@
 title: Arabic
 type: pages
 category: Languages
+groupingID: 9
 description: "About our Arabic translations."
 locale: en
 ---

@@ -2,6 +2,7 @@
 title: Norwegian
 type: pages
 category: Languages
+groupingID: 26
 description: "About our Norwegian translations."
 locale: en
 ---

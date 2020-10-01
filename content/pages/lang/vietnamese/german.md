@@ -2,6 +2,7 @@
 title: Vietnamesisch
 type: pages
 category: Languages
+groupingID: 37
 description: "Vietnamesisch"
 locale: de
 ---

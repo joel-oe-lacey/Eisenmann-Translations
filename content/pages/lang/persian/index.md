@@ -2,6 +2,7 @@
 title: Persian
 type: pages
 category: Languages
+groupingID: 27
 description: "About our Persian translations."
 locale: en
 ---

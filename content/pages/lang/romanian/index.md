@@ -2,6 +2,7 @@
 title: Romanian
 type: pages
 category: Languages
+groupingID: 30
 description: "About our Romanian translations."
 locale: en
 ---

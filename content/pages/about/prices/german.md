@@ -2,7 +2,7 @@
 title: Preise
 type: pages
 category: Kontakt
-categoryIndex: 2
+groupingID: 5
 description: "Zeilenpreise unserer Übersetzungen."
 linkDisplay: true
 locale: de

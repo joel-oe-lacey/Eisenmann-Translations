@@ -2,6 +2,7 @@
 title: Italienisch
 type: pages
 category: Languages
+groupingID: 22
 description: "Italienisch"
 locale: de
 ---

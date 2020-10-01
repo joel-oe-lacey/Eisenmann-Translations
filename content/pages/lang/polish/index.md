@@ -2,6 +2,7 @@
 title: Polish
 type: pages
 category: Languages
+groupingID: 28
 description: "About our Polish translations."
 locale: en
 ---

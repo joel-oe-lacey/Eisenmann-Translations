@@ -2,6 +2,7 @@
 title: Bulgarisch
 type: pages
 category: Languages
+groupingID: 10
 description: "Bulgarisch"
 locale: de
 ---

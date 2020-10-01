@@ -2,6 +2,7 @@
 title: Slovenian
 type: pages
 category: Languages
+groupingID: 32
 description: "About our Slovenian translations."
 locale: en
 ---

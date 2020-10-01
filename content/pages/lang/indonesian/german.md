@@ -2,6 +2,7 @@
 title: Indonesisch
 type: pages
 category: Languages
+groupingID: 21
 description: "Indonesisch"
 locale: de
 ---
