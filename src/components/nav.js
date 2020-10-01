@@ -1,5 +1,11 @@
 import React, { useState } from "react"
-import { Link, graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
+import {
+  useIntl,
+  Link,
+  FormattedMessage
+} from "gatsby-plugin-intl"
+
 import styled from 'styled-components'
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
@@ -10,9 +16,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import MenuIcon from '@material-ui/icons/Menu';
 import LangSelector from './LangSelector';
-import {
-  useIntl
-} from "gatsby-plugin-intl"
 
 const StyledNav = styled.nav`
     height: 10%;
@@ -34,7 +37,8 @@ const HomeLink = styled.h2`
 
 const FetchNav = ({ data }) => { 
   const [triggered, setTrigger] = useState(false);
-  const { locale } = useIntl();
+  const intl = useIntl();
+  const locale = intl.locale;
   
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -47,10 +51,11 @@ const FetchNav = ({ data }) => {
   const postsByCategory = data.allMarkdownRemark.edges.reduce((groupPosts, { node }) => {
     const category = node.frontmatter.category ? node.frontmatter.category : 'none';
     const markdownLocale = node.frontmatter.locale;
+    const redirect = node.frontmatter.redirectLink;
 
-    if (!groupPosts[category] && markdownLocale === locale) {
+    if (!groupPosts[category] && (markdownLocale === locale || redirect)) {
       groupPosts[category] = [node]
-    } else if (markdownLocale === locale) {
+    } else if (markdownLocale === locale || redirect) {
       groupPosts[category].push(node)
     }
 
@@ -102,7 +107,7 @@ const FetchNav = ({ data }) => {
           <MenuIcon />
         </Button>
         <Link to='/'>
-          <HomeLink>Eisenmann Translation</HomeLink>
+          <HomeLink>{intl.formatMessage({ id: "header" })}</HomeLink>
         </Link>
         <Drawer anchor='left' open={triggered} onClose={toggleDrawer(false)}>
           {list()}
@@ -132,7 +137,7 @@ const Nav = () => {
                 }
               }
             }, sort: {
-            fields: frontmatter___categoryIndex
+            fields: frontmatter___groupingID
             }) {
             edges {
               node {

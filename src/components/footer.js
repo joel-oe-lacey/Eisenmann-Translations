@@ -78,10 +78,11 @@ const FetchFooter = ({ data }) => {
   const postsByCategory = data.allMarkdownRemark.edges.reduce((groupPosts, { node }) => {
     const category = node.frontmatter.category ? node.frontmatter.category : 'none';
     const markdownLocale = node.frontmatter.locale;
+    const redirect = node.frontmatter.redirectLink;
 
-    if (!groupPosts[category] && markdownLocale === locale) {
+    if (!groupPosts[category] && (markdownLocale === locale || redirect)) {
       groupPosts[category] = [node]
-    } else if (markdownLocale === locale) {
+    } else if (markdownLocale === locale || redirect) {
       groupPosts[category].push(node)
     }
 
@@ -159,7 +160,7 @@ const Footer = () => {
                 }
               }
             }, sort: {
-            fields: frontmatter___categoryIndex
+            fields: frontmatter___groupingID
             }) {
             edges {
               node {
