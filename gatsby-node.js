@@ -1,30 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const trimPath = str => {
-  const lastDirectoryIndex = str.lastIndexOf('/') + 1;
-  const trimCount = -(str.length - lastDirectoryIndex);
-
-  return str.slice(0, trimCount)
-}
-
-const groupMarkdownByPath = markdown => {
-  return markdown.reduce((pagesByPath, {
-    node
-  }) => {
-    const path = trimPath(node.fileAbsolutePath);
-
-    if (!pagesByPath[path]) {
-      pagesByPath[path] = { [node.frontmatter.locale] : node }
-    } else {
-      pagesByPath[path][node.frontmatter.locale] = node
-    }
-
-    return pagesByPath;
-  }, {})
-}
-
-
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -49,6 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 type
                 category
                 locale
+                groupingID
               }
             }
           }
@@ -63,15 +40,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // // Create blog posts pages.
   const posts = result.data.allMarkdownRemark.edges
-  const markdownGroupedByPath = groupMarkdownByPath(posts)
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
     const type = post.node.frontmatter.type
-
-    const groupPath = trimPath(post.node.fileAbsolutePath);
-    const pairedPosts = markdownGroupedByPath[groupPath]
+    const groupingID = post.node.frontmatter.groupingID
 
     if (type === 'pages') {
       createPage({
@@ -79,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: sitePages,
         context: {
           slug: post.node.fields.slug,
-          versions: pairedPosts,
+          groupingID,
           previous,
           next,
         },
@@ -90,7 +64,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
-          versions: pairedPosts,
+          groupingID,
           previous,
           next,
         },
