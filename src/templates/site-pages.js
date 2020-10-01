@@ -7,6 +7,9 @@ import LangInfoSelector from "../components/langInfoSelector"
 import {
   useIntl
 } from "gatsby-plugin-intl"
+import {
+  groupPagesByLocale
+} from '../../helpers'
 
 import {
   rhythm
@@ -18,12 +21,10 @@ const Info = styled.section`
     padding: ${rhythm(2.5)};
 `;
 
-const BlogIndex = ({ data, pageContext, location }) => {
-  const intl = useIntl()
-  const {
-    versions
-  } = pageContext;
-  const localizedPost = versions[intl.locale];
+const BlogIndex = ({ data, location }) => {
+  const intl = useIntl();
+  const posts = groupPagesByLocale(data.allMarkdownRemark.edges)
+  const localizedPost = posts[intl.locale];
 
   const siteTitle = localizedPost.frontmatter.title
   const category = localizedPost.frontmatter.category
@@ -39,23 +40,27 @@ const BlogIndex = ({ data, pageContext, location }) => {
 
 export default BlogIndex
 
-// export const pageQuery = graphql`
-//   query SitePagesBySlug($slug: String!) {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       id
-//       excerpt(pruneLength: 160)
-//       html
-//       frontmatter {
-//         title
-//         date(formatString: "MMMM DD, YYYY")
-//         description
-//         category 
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query SitePagesBySlug($groupingID: Int!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(filter: {frontmatter: {groupingID: {eq: $groupingID}}}) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            category
+            locale
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
