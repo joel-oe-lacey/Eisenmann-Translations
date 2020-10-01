@@ -9,6 +9,9 @@ import Image from "gatsby-image"
 import {
   rhythm
 } from "../utils/typography"
+import {
+  useIntl
+} from "gatsby-plugin-intl"
 
 const StyledHeader = styled.section`
   height: 60%;
@@ -58,7 +61,8 @@ const Backdrop = styled(Image)({
 });
 
 const FetchHeader = ({location, title, data}) => { 
-  const rootPath = `${__PATH_PREFIX__}/`
+  const intl = useIntl()
+  const rootPath = `${__PATH_PREFIX__}/${intl.locale}/`
 
   return (
     <StyledHeader>
