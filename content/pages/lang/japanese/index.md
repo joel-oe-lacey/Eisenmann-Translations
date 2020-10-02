@@ -2,7 +2,9 @@
 title: Japanese
 type: pages
 category: Languages
+groupingID: 23
 description: "About our Japanese translations."
+locale: en
 ---
 ## Japanese
 

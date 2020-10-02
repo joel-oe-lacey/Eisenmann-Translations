@@ -2,7 +2,9 @@
 title: Albanian
 type: pages
 category: Languages
+groupingID: 8
 description: "About our Albanian translations."
+locale: en
 ---
 
 ## Albanian

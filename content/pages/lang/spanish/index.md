@@ -2,7 +2,9 @@
 title: Spanish
 type: pages
 category: Languages
+groupingID: 33
 description: "About our Spanish translations."
+locale: en
 ---
 ## Spanish
 

@@ -2,7 +2,9 @@
 title: Finnish
 type: pages
 category: Languages
+groupingID: 16
 description: "About our Finnish translations."
+locale: en
 ---
 
 ## Finnish

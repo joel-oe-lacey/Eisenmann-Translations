@@ -2,7 +2,9 @@
 title: Indonesian
 type: pages
 category: Languages
+groupingID: 21
 description: "About our Indonesian translations."
+locale: en
 ---
 
 ## Indonesian

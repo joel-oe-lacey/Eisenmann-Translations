@@ -2,7 +2,9 @@
 title: Italian
 type: pages
 category: Languages
+groupingID: 22
 description: "About our Italian translations."
+locale: en
 ---
 ## Italian
 

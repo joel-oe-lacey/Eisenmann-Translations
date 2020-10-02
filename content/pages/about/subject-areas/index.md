@@ -2,9 +2,10 @@
 title: Subject Areas
 type: pages
 category: About
-categoryIndex: 1
+groupingID: 6
 description: "Subject areas we've worked in."
 linkDisplay: true
+locale: en
 ---
 
 ## Law, Economics, Medicine, Technology, IT…

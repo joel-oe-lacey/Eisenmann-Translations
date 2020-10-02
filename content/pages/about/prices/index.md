@@ -2,9 +2,10 @@
 title: Prices
 type: pages
 category: Contact
-categoryIndex: 2
+groupingID: 5
 description: "About our prices."
 linkDisplay: true
+locale: en
 ---
 
 ## Prices

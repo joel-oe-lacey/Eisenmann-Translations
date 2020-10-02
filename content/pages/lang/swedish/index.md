@@ -2,7 +2,9 @@
 title: Swedish
 type: pages
 category: Languages
+groupingID: 34
 description: "About our Swedish translations."
+locale: en
 ---
 
 ## Swedish

@@ -2,7 +2,9 @@
 title: Danish
 type: pages
 category: Languages
+groupingID: 13
 description: "About our Danish translations."
+locale: en
 ---
 
 ## Danish

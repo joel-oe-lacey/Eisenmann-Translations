@@ -2,7 +2,9 @@
 title: Croatian and Serbian
 type: pages
 category: Languages
+groupingID: 12
 description: "About our Croatian and Serbian translations."
+locale: en
 ---
 
 ## Croatian and Serbian

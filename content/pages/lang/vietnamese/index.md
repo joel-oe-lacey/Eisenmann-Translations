@@ -2,7 +2,9 @@
 title: Vietnamese
 type: pages
 category: Languages
+groupingID: 37
 description: "About our Vietnamese translations."
+locale: en
 ---
 
 ## Vietnamese

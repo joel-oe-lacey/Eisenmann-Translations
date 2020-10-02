@@ -9,6 +9,7 @@ import Fab from '@material-ui/core/Fab';
 import Nav from "../components/nav";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import LangSwitch from './langSwitch';
 import {
   createMuiTheme
 } from '@material-ui/core/styles';
@@ -16,10 +17,11 @@ import {
   ThemeProvider
 } from '@material-ui/styles';
 import red from '@material-ui/core/colors/red';
+import {
+  useIntl,
+  FormattedMessage
+} from "gatsby-plugin-intl"
 
-// import {
-//   rhythm
-// } from "../utils/typography"
 
 const theme = createMuiTheme({
   palette: {
@@ -56,7 +58,18 @@ const StyledFAB = styled(Fab)({
   margin: '3rem',
 });
 
+const Toolkit = styled.section`
+  height: max-content;
+  width: max-content;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  margin: 1.5rem;
+`;
+
 const Layout = ({ location, title, children }) => {
+  const intl = useIntl();
+
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
@@ -65,11 +78,14 @@ const Layout = ({ location, title, children }) => {
         <Header location={location} title={title}/>
         <StyledBody>{children}</StyledBody>
         <Footer/>
-        <Link to="/about/prices">
-          <StyledFAB variant="extended" color="primary" aria-label="contact us">
-            Contact Us
-          </StyledFAB>
-        </Link>
+        <Toolkit>
+          <LangSwitch />
+          <Link to="/about/prices">
+            <Fab variant="extended" color="primary" aria-label="contact us">
+              {intl.formatMessage({ id: "contact" })}
+            </Fab>
+          </Link>
+        </Toolkit>
       </Wrapper>
     </ThemeProvider>
   )

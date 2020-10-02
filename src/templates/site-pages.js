@@ -3,7 +3,13 @@ import { graphql } from "gatsby"
 import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import LangSelector from "../components/languageSelector"
+import LangInfoSelector from "../components/langInfoSelector"
+import {
+  useIntl
+} from "gatsby-plugin-intl"
+import {
+  groupPagesByLocale
+} from '../../helpers'
 
 import {
   rhythm
@@ -16,37 +22,44 @@ const Info = styled.section`
 `;
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.markdownRemark.frontmatter.title
-  const post = data.markdownRemark
-  const category = post.frontmatter.category
+  const intl = useIntl();
+  const posts = groupPagesByLocale(data.allMarkdownRemark.edges)
+  const localizedPost = posts[intl.locale];
+
+  const siteTitle = localizedPost.frontmatter.title
+  const category = localizedPost.frontmatter.category
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      {category === "Languages" && <LangSelector />}
-      <Info dangerouslySetInnerHTML={{ __html: post.html }} />
+      {category === "Languages" && <LangInfoSelector />}
+      <Info dangerouslySetInnerHTML={{ __html: localizedPost.html }} />
     </Layout>
   )
 }
 
 export default BlogIndex
 
-export const pageQuery = graphql `
-  query SitePagesBySlug($slug: String!) {
+export const pageQuery = graphql`
+  query SitePagesBySlug($groupingID: Int!) {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-        category 
+    allMarkdownRemark(filter: {frontmatter: {groupingID: {eq: $groupingID}}}) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            category
+            locale
+          }
+          fields {
+            slug
+          }
+        }
       }
     }
   }

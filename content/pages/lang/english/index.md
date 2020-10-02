@@ -2,7 +2,9 @@
 title: English
 type: pages
 category: Languages
+groupingID: 15
 description: "About our English translations."
+locale: en
 ---
 ## English
 

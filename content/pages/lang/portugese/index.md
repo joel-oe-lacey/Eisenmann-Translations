@@ -2,7 +2,9 @@
 title: Portugese
 type: pages
 category: Languages
+groupingID: 29
 description: "About our Portugese translations."
+locale: en
 ---
 ## Portuguese
 

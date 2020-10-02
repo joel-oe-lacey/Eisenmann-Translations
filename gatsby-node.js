@@ -2,12 +2,6 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions }) => {
-  //create collections  
-  //then create different prev next for each
-  //can all be under same createPages render?
-
-  //worry about sorting later
-
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
@@ -24,9 +18,14 @@ exports.createPages = async ({ graphql, actions }) => {
               fields {
                 slug
               }
+              fileAbsolutePath
+              html
               frontmatter {
                 title
                 type
+                category
+                locale
+                groupingID
               }
             }
           }
@@ -39,13 +38,14 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors
   }
 
-  // Create blog posts pages.
+  // // Create blog posts pages.
   const posts = result.data.allMarkdownRemark.edges
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
     const type = post.node.frontmatter.type
+    const groupingID = post.node.frontmatter.groupingID
 
     if (type === 'pages') {
       createPage({
@@ -53,6 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: sitePages,
         context: {
           slug: post.node.fields.slug,
+          groupingID,
           previous,
           next,
         },
@@ -63,6 +64,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
+          groupingID,
           previous,
           next,
         },
@@ -76,6 +78,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
+    
     createNodeField({
       name: `slug`,
       node,

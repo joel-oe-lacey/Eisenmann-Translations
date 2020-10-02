@@ -1,5 +1,11 @@
 import React, { useState } from "react"
-import { Link, graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
+import {
+  useIntl,
+  Link,
+  FormattedMessage
+} from "gatsby-plugin-intl"
+
 import styled from 'styled-components'
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
@@ -13,7 +19,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 const StyledNav = styled.nav`
     height: 10%;
     width: 100%;
-    opacity: .5;
+    opacity: .8;
     background-color: transparent;
     display: flex;
     flex-direction: row;
@@ -30,7 +36,9 @@ const HomeLink = styled.h2`
 
 const FetchNav = ({ data }) => { 
   const [triggered, setTrigger] = useState(false);
-
+  const intl = useIntl();
+  const locale = intl.locale;
+  
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -41,10 +49,12 @@ const FetchNav = ({ data }) => {
 
   const postsByCategory = data.allMarkdownRemark.edges.reduce((groupPosts, { node }) => {
     const category = node.frontmatter.category ? node.frontmatter.category : 'none';
+    const markdownLocale = node.frontmatter.locale;
+    const redirect = node.frontmatter.redirectLink;
 
-    if (!groupPosts[category]) {
+    if (!groupPosts[category] && (markdownLocale === locale || (markdownLocale === locale && redirect))) {
       groupPosts[category] = [node]
-    } else {
+    } else if (markdownLocale === locale || (markdownLocale === locale && redirect)) {
       groupPosts[category].push(node)
     }
 
@@ -96,7 +106,7 @@ const FetchNav = ({ data }) => {
           <MenuIcon />
         </Button>
         <Link to='/'>
-          <HomeLink>Eisenmann Translation</HomeLink>
+          <HomeLink>{intl.formatMessage({ id: "header" })}</HomeLink>
         </Link>
         <Drawer anchor='left' open={triggered} onClose={toggleDrawer(false)}>
           {list()}
@@ -107,9 +117,11 @@ const FetchNav = ({ data }) => {
 }
 
 const Nav = () => {
+
     return (
     <StaticQuery
-      query={graphql`
+      query = {
+        graphql`
         query {
           site {
             siteMetadata {
@@ -123,7 +135,7 @@ const Nav = () => {
                 }
               }
             }, sort: {
-            fields: frontmatter___categoryIndex
+            fields: frontmatter___groupingID
             }) {
             edges {
               node {
@@ -136,6 +148,7 @@ const Nav = () => {
                   type
                   category
                   redirectLink
+                  locale
                 }
               }
             }

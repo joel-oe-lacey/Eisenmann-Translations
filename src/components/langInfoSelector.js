@@ -20,7 +20,7 @@ const Wrapper = styled(List)({
     overflow: 'scroll'
 })
 
-const FetchSelector = ({ data }) => { 
+const FetchInfoSelector = ({ data }) => { 
   const languages = data.allMarkdownRemark.edges;
 
   const list = () => (
@@ -49,7 +49,7 @@ const FetchSelector = ({ data }) => {
   )
 }
 
-const LangSelector = () => {
+const LangInfoSelector = () => {
     return (
     <StaticQuery
       query={graphql`
@@ -82,9 +82,9 @@ const LangSelector = () => {
           }
         }
       `}
-      render={data => <FetchSelector data={data} />}
+      render={data => <FetchInfoSelector data={data} />}
     />
   )
 }
 
-export default LangSelector
+export default LangInfoSelector

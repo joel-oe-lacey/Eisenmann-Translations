@@ -2,7 +2,9 @@
 title: Slovak
 type: pages
 category: Languages
+groupingID: 31
 description: "About our Slovak translations."
+locale: en
 ---
 
 ## Slovak

@@ -2,8 +2,9 @@
 title: About Us
 type: pages
 category: About
-categoryIndex: 1
+groupingID: 7
 description: "About the Eisenmann Übersetzungsteam team."
+locale: en
 ---
 
 ## Background Information

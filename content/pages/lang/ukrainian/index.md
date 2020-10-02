@@ -2,7 +2,9 @@
 title: Ukrainian
 type: pages
 category: Languages
+groupingID: 36
 description: "About our Ukrainian translations."
+locale: en
 ---
 
 ## Ukrainian

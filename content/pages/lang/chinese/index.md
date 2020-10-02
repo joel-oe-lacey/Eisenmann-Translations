@@ -2,7 +2,9 @@
 title: Chinese
 type: pages
 category: Languages
+groupingID: 11
 description: "About our Chinese translations."
+locale: en
 ---
 
 ## Chinese

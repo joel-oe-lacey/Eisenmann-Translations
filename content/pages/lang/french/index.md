@@ -2,7 +2,9 @@
 title: French
 type: pages
 category: Languages
+groupingID: 17
 description: "About our French translations."
+locale: en
 ---
 ## French
 

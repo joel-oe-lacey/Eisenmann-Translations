@@ -9,6 +9,9 @@ import Image from "gatsby-image"
 import {
   rhythm
 } from "../utils/typography"
+import {
+  useIntl
+} from "gatsby-plugin-intl"
 
 const StyledHeader = styled.section`
   height: 60%;
@@ -41,7 +44,7 @@ const FloatedTitle = styled.h1`
 const Logo = styled.section`
   height: 65%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: -100;
   background-image: url(${logo});
   background-size: calc(50% + 15rem);
@@ -58,9 +61,12 @@ const Backdrop = styled(Image)({
 });
 
 const FetchHeader = ({location, title, data}) => { 
+  const intl = useIntl()
+  const rootPath = `${__PATH_PREFIX__}/${intl.locale}/`
+
   return (
     <StyledHeader>
-      {location === "/" ? <Logo /> : <Backdrop fluid={data.background.childImageSharp.fluid} style={{position: 'absolute'}}/>}
+      {location === rootPath ? <Logo /> : <Backdrop fluid={data.background.childImageSharp.fluid} style={{position: 'absolute'}}/>}
       <FloatedTitle location={location}>{title}</FloatedTitle>
       <StyledHolder location={location}/>
     </StyledHeader>
