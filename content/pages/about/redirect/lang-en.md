@@ -5,6 +5,7 @@ category: About
 groupingID: 1000
 redirectLink: /lang/english/
 linkDisplay: true
+locale: en
 ---
 
 A redirect example file.
