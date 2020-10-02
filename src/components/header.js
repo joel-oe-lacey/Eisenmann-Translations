@@ -44,7 +44,7 @@ const FloatedTitle = styled.h1`
 const Logo = styled.section`
   height: 65%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: -100;
   background-image: url(${logo});
   background-size: calc(50% + 15rem);
