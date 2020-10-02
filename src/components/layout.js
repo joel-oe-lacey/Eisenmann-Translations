@@ -9,6 +9,7 @@ import Fab from '@material-ui/core/Fab';
 import Nav from "../components/nav";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import LangSwitch from './langSwitch';
 import {
   createMuiTheme
 } from '@material-ui/core/styles';
@@ -57,7 +58,16 @@ const StyledFAB = styled(Fab)({
   margin: '3rem',
 });
 
-const Layout = ({ intl, location, title, children }) => {
+const Toolkit = styled.section`
+  height: max-content;
+  width: max-content;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  margin: 1.5rem;
+`;
+
+const Layout = ({ location, title, children }) => {
   const intl = useIntl();
 
   return (
@@ -68,11 +78,14 @@ const Layout = ({ intl, location, title, children }) => {
         <Header location={location} title={title}/>
         <StyledBody>{children}</StyledBody>
         <Footer/>
-        <Link to="/about/prices">
-          <StyledFAB variant="extended" color="primary" aria-label="contact us">
-            {intl.formatMessage({ id: "contact" })}
-          </StyledFAB>
-        </Link>
+        <Toolkit>
+          <LangSwitch />
+          <Link to="/about/prices">
+            <Fab variant="extended" color="primary" aria-label="contact us">
+              {intl.formatMessage({ id: "contact" })}
+            </Fab>
+          </Link>
+        </Toolkit>
       </Wrapper>
     </ThemeProvider>
   )
