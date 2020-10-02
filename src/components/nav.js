@@ -15,12 +15,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import MenuIcon from '@material-ui/icons/Menu';
-import LangSelector from './LangSelector';
 
 const StyledNav = styled.nav`
     height: 10%;
     width: 100%;
-    opacity: .5;
+    opacity: .8;
     background-color: transparent;
     display: flex;
     flex-direction: row;
@@ -53,9 +52,9 @@ const FetchNav = ({ data }) => {
     const markdownLocale = node.frontmatter.locale;
     const redirect = node.frontmatter.redirectLink;
 
-    if (!groupPosts[category] && (markdownLocale === locale || redirect)) {
+    if (!groupPosts[category] && (markdownLocale === locale || (markdownLocale === locale && redirect))) {
       groupPosts[category] = [node]
-    } else if (markdownLocale === locale || redirect) {
+    } else if (markdownLocale === locale || (markdownLocale === locale && redirect)) {
       groupPosts[category].push(node)
     }
 
@@ -112,7 +111,6 @@ const FetchNav = ({ data }) => {
         <Drawer anchor='left' open={triggered} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
-        <LangSelector />
       </React.Fragment>
     </StyledNav>
   )
