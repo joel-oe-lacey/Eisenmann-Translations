@@ -12,7 +12,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import {
-  useIntl
+  useIntl,
+  FormattedMessage
 } from "gatsby-plugin-intl"
 // import TableFooter from '@material-ui/core/TableFooter';
 
@@ -71,18 +72,17 @@ const Legal = styled.section`
 `;
 
 const FetchFooter = ({ data }) => { 
-  const {
-    locale
-  } = useIntl();
+  const intl = useIntl();
+  const locale = intl.locale;
 
   const postsByCategory = data.allMarkdownRemark.edges.reduce((groupPosts, { node }) => {
     const category = node.frontmatter.category ? node.frontmatter.category : 'none';
     const markdownLocale = node.frontmatter.locale;
     const redirect = node.frontmatter.redirectLink;
 
-    if (!groupPosts[category] && (markdownLocale === locale || redirect)) {
+    if (!groupPosts[category] && (markdownLocale === locale || (markdownLocale === locale &&redirect))) {
       groupPosts[category] = [node]
-    } else if (markdownLocale === locale || redirect) {
+    } else if (markdownLocale === locale || (markdownLocale === locale && redirect)) {
       groupPosts[category].push(node)
     }
 
@@ -122,12 +122,9 @@ const FetchFooter = ({ data }) => {
 
   return (
     <StyledFooter>
-        {/* <Image
-        fixed={data.banner.childImageSharp.fixed}
-        alt="A banner of tiled greyscale landscape shots" /> */}
         {list()}
         <Certification>
-          <p>Our translators are certified under the BDÜ</p>
+          <p>{intl.formatMessage({ id: "cert" })}</p>
           <Link to="/about/team">
             <Image
             fixed={data.certification.childImageSharp.fixed}
@@ -136,7 +133,7 @@ const FetchFooter = ({ data }) => {
         </Certification>
         <Legal>
           <p>© {new Date().getFullYear()} Eisenmann Uebersetzungen</p>
-          <p>Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a></p>
+          <p>{intl.formatMessage({ id: "gatsby" })} {` `} <a href="https://www.gatsbyjs.org">Gatsby</a></p>
           <a href="">Data Privacy</a>
         </Legal>
     </StyledFooter>
