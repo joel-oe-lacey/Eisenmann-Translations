@@ -9,6 +9,7 @@ export const groupPagesByLocale = markdown => {
   }, {})
 }
 
+
 // const trimPath = str => {
 //   const lastDirectoryIndex = str.lastIndexOf('/') + 1;
 //   const trimCount = -(str.length - lastDirectoryIndex);
