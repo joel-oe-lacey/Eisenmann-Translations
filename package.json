@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
-  "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "name": "eisenmann-translations",
+  "private": false,
+  "description": "An informational translation service site, built in Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Joel Lacey <joellacey@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/joel-oe-lacey/Eisenmann-Translations/issues"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "prettier": "2.1.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/joel-oe-lacey/Eisenmann-Translations#readme",
   "keywords": [
     "gatsby"
   ],
@@ -56,7 +56,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/joel-oe-lacey/Eisenmann-Translations"
   },
   "scripts": {
     "build": "gatsby build",
