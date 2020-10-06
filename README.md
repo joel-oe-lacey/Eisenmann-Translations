@@ -1,6 +1,10 @@
 # Eisenmann Translations
+### [Github Pages Staging Link](https://joel-oe-lacey.github.io/Eisenmann-Translations/)
 ## Work In Progress
 This is an informational site for a German based translation service, currently in progress. The site is a statically generated site built utilizing Gatsby.
+
+![Screenshot](https://joel-oe-lacey-resources.s3.amazonaws.com/eisenmann-translation.png)
+
 
 ## Features
 - **Static Pages Generated Via Markdown** - A hallmark advantage of Gatsby, sites can be created from template patterns based on inputted markdown. When paired with a Tina CMS this offers powerful supportability.
