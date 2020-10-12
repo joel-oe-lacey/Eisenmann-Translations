@@ -20,7 +20,7 @@ locale: en
 * good writing style
 * good general knowledge
 * non-smoker
-* 
+* lives in 
 
 **We can offer you:**
 
