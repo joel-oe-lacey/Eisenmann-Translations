@@ -10,10 +10,11 @@ import {
 import {
   groupPagesByLocale
 } from '../../helpers'
-
 import {
   rhythm
 } from "../utils/typography"
+import { useRemarkForm } from 'gatsby-tinacms-remark'
+import { usePlugin } from 'tinacms'
 
 const Info = styled.section`
     height: 100%;
@@ -24,7 +25,10 @@ const Info = styled.section`
 const BlogIndex = ({ data, location }) => {
   const intl = useIntl();
   const posts = groupPagesByLocale(data.allMarkdownRemark.edges)
-  const localizedPost = posts[intl.locale];
+  const localizedFetch = posts[intl.locale];
+  
+  const [localizedPost, form] = useRemarkForm(localizedFetch)
+  usePlugin(form)
 
   const siteTitle = localizedPost.frontmatter.title
   const category = localizedPost.frontmatter.category
@@ -59,6 +63,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          ...TinaRemark
         }
       }
     }
