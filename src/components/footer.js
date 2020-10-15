@@ -6,27 +6,13 @@ import {
 } from "gatsby"
 import Image from "gatsby-image"
 import styled from 'styled-components'
-// import { makeStyles, styled } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import {
-  useIntl,
-  FormattedMessage
+  useIntl
 } from "gatsby-plugin-intl"
-// import TableFooter from '@material-ui/core/TableFooter';
-
-// const StyledFooter = styled(TableFooter)({
-//     height: 'min-content',
-//     width: '100%',
-//     backgroundColor: '#333333',
-//     display: 'flex',
-//     flexFlow: 'row wrap',
-//     justifyContent: 'space-between',
-//     padding: '3rem',
-//     margin: '0'
-// })
 
 const StyledFooter = styled.footer`
     height: min-content;
@@ -104,8 +90,8 @@ const FetchFooter = ({ data }) => {
                       const redirect = node.frontmatter.redirectLink;
                       
                       return (
-                      <Link to={redirect ? redirect : slug}>
-                        <ListItem button key={title}>
+                      <Link to={redirect ? redirect : slug} key={title}>
+                        <ListItem button>
                             <ListItemText primary={title} />
                         </ListItem>
                       </Link>
