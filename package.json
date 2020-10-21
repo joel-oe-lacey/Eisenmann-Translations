@@ -48,6 +48,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "@testing-library/react": "^11.1.0",
     "prettier": "2.1.0"
   },
   "homepage": "https://github.com/joel-oe-lacey/Eisenmann-Translations#readme",
