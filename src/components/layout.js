@@ -19,7 +19,6 @@ import {
 import red from '@material-ui/core/colors/red';
 import {
   useIntl,
-  FormattedMessage
 } from "gatsby-plugin-intl"
 
 
@@ -38,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 `
+
 const Wrapper = styled.section`
     height: 100vh;
     width: 100%;
@@ -50,13 +50,6 @@ const StyledBody = styled.main`
     width: 100%;
     background: white;
 `;
-
-const StyledFAB = styled(Fab)({
-  position: 'fixed',
-  right: 0,
-  bottom: 0,
-  margin: '3rem',
-});
 
 const Toolkit = styled.section`
   height: max-content;
