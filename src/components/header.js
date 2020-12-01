@@ -60,7 +60,7 @@ const Backdrop = styled(Image)({
   objectFit: 'cover'
 });
 
-const FetchHeader = ({location, title, data}) => { 
+export const FetchHeader = ({location, title, data}) => { 
   const intl = useIntl()
   const rootPath = `${__PATH_PREFIX__}/${intl.locale}/`
 
@@ -73,7 +73,7 @@ const FetchHeader = ({location, title, data}) => {
   )
 }
 
-const Header = ({ location, title }) => {
+export const Header = ({ location, title }) => {
     const data = useStaticQuery(graphql`
         query {
           background: file(absolutePath: { regex: "/river.jpg/" }) {
@@ -94,5 +94,3 @@ const Header = ({ location, title }) => {
       />
   )
 }
-
-export default Header
