@@ -1,5 +1,6 @@
 import React from "react"
 import {
+  Link,
   graphql,
   StaticQuery
 } from "gatsby"
@@ -7,7 +8,6 @@ import styled from 'styled-components'
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Link from './link';
 
 const Wrapper = styled(List)({
     height: 'max-content',
