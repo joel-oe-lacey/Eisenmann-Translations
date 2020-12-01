@@ -2,7 +2,7 @@ import React from "react"
 import {
   Link,
   graphql,
-  StaticQuery
+  useStaticQuery
 } from "gatsby"
 import Image from "gatsby-image"
 import styled from 'styled-components'
@@ -127,9 +127,7 @@ const FetchFooter = ({ data }) => {
 }
 
 const Footer = () => {
-    return (
-    <StaticQuery
-      query={graphql`
+    const data = useStaticQuery(graphql`
         query {
           site {
             siteMetadata {
@@ -176,10 +174,11 @@ const Footer = () => {
             }
           }
         }
-      `}
-      render={data => <FetchFooter data={data} />}
-    />
-  )
+      `)
+
+    return (
+      <FetchFooter data={data} />
+    )
 }
 
 export default Footer
