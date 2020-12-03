@@ -10,3 +10,6 @@ export const useIntl = () => {
         }
     }
 }
+
+export const changeLocale = jest.fn();
+
