@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="sc-bdnylx inwbrT"
+>
+  <ul
+    className="MuiList-root MuiList-padding"
+  >
+    <li
+      className="MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters"
+    >
+      Contact
+    </li>
+    <a
+      href="/about/contact-us/en/"
+    >
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <div
+          className="MuiListItemText-root"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+          >
+            Contact Us
+          </span>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/about/jobs/en/"
+    >
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <div
+          className="MuiListItemText-root"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+          >
+            Jobs
+          </span>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/about/prices/"
+    >
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <div
+          className="MuiListItemText-root"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+          >
+            Prices
+          </span>
+        </div>
+      </div>
+    </a>
+  </ul>
+  <ul
+    className="MuiList-root MuiList-padding"
+  >
+    <li
+      className="MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters"
+    >
+      About
+    </li>
+    <a
+      href="/about/native-speakers/"
+    >
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <div
+          className="MuiListItemText-root"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+          >
+            Native Speakers
+          </span>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/about/subject-areas/"
+    >
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <div
+          className="MuiListItemText-root"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+          >
+            Subject Areas
+          </span>
+        </div>
+      </div>
+    </a>
+    <a
+      href="/lang/english/"
+    >
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <div
+          className="MuiListItemText-root"
+        >
+          <span
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+          >
+            Language
+          </span>
+        </div>
+      </div>
+    </a>
+  </ul>
+  <section
+    className="sc-gtssRu xXxNn"
+  >
+    <p>
+      cert
+    </p>
+    <a
+      href="/about/team"
+    >
+      <div
+        className=" gatsby-image-wrapper"
+        style={
+          Object {
+            "display": "inline-block",
+            "height": 145,
+            "overflow": "hidden",
+            "position": "relative",
+            "width": 100,
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAdABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgUE/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgQD/9oADAMBAAIQAxAAAAFy1Vpn1xRPvz014ZSOM1//xAAgEAABAwIHAAAAAAAAAAAAAAACAAEDBBQQEhMhIjEz/9oACAEBAAEFAjqiYrs1EbygTDm4ql8jpSc7QlCGmD74dr//xAAaEQACAgMAAAAAAAAAAAAAAAAAAQIQERIx/9oACAEDAQE/Acsjw0Vf/8QAGxEAAgEFAAAAAAAAAAAAAAAAAAIBEhMhMVH/2gAIAQIBAT8BpXg2y4xOT//EAB0QAAIBBAMAAAAAAAAAAAAAAAABEgIRITEgMoH/2gAIAQEABj8CassM0iTK77kx6PRuSyzsiL4f/8QAHxABAAIBBAMBAAAAAAAAAAAAAQARITFBUXEQYdHx/9oACAEBAAE/ITvWhvAvsysgN1iNxPYlHDLva5x8pqOB0Z+KxDQW7xMl14XpP//aAAwDAQACAAMAAAAQJ8AP/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAwEBPxB37LQsvBhhf//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxAwhxhBS1rf/8QAIBABAQACAQMFAAAAAAAAAAAAAREAIVFBYdFxgaHB8P/aAAgBAQABPxCf0hELGc4sNZz5MOXJFzWKjGlZ1Tv64r270NHkmQmIaz3wliADrreM/V/WV4pQQi98RpDo6G/GEBIb7HjCRCAkz//Z"
+          style={
+            Object {
+              "height": "100%",
+              "left": 0,
+              "objectFit": "cover",
+              "objectPosition": "center",
+              "opacity": 1,
+              "position": "absolute",
+              "top": 0,
+              "transitionDelay": "500ms",
+              "width": "100%",
+            }
+          }
+        />
+        <picture>
+          <source
+            srcSet="/static/00f598e2bfece3cac12348633027a854/1b3ab/BDUE-Mitglied-Logo.jpg 1x"
+          />
+          <img
+            alt="A blue BDÜ certification badge"
+            height={145}
+            loading="lazy"
+            onLoad={[Function]}
+            src="/static/00f598e2bfece3cac12348633027a854/1b3ab/BDUE-Mitglied-Logo.jpg"
+            srcSet="/static/00f598e2bfece3cac12348633027a854/1b3ab/BDUE-Mitglied-Logo.jpg 1x"
+            style={
+              Object {
+                "height": "100%",
+                "left": 0,
+                "objectFit": "cover",
+                "objectPosition": "center",
+                "opacity": 0,
+                "position": "absolute",
+                "top": 0,
+                "transition": "opacity 500ms",
+                "width": "100%",
+              }
+            }
+            width={100}
+          />
+        </picture>
+        <noscript
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<picture><source srcset=\\"/static/00f598e2bfece3cac12348633027a854/1b3ab/BDUE-Mitglied-Logo.jpg 1x\\" /><img loading=\\"lazy\\" width=\\"100\\" height=\\"145\\" srcset=\\"/static/00f598e2bfece3cac12348633027a854/1b3ab/BDUE-Mitglied-Logo.jpg 1x\\" src=\\"/static/00f598e2bfece3cac12348633027a854/1b3ab/BDUE-Mitglied-Logo.jpg\\" alt=\\"A blue BDÜ certification badge\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+            }
+          }
+        />
+      </div>
+    </a>
+  </section>
+  <section
+    className="sc-dlnjPT fEVegM"
+  >
+    <p>
+      © 
+      2020
+       Eisenmann Uebersetzungen
+    </p>
+    <p>
+      gatsby
+       
+       
+       
+      <a
+        href="https://www.gatsbyjs.org"
+      >
+        Gatsby
+      </a>
+    </p>
+    <a
+      href=""
+    >
+      Data Privacy
+    </a>
+  </section>
+</footer>
+`;
