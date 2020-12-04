@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { 
+  Link,
   graphql, 
   useStaticQuery 
 } from "gatsby"
 import {
-  useIntl,
-  Link,
+  useIntl
 } from "gatsby-plugin-intl"
 
 import styled from 'styled-components'
@@ -36,7 +36,7 @@ const HomeLink = styled.h2`
   color: black;
 `
 
-const FetchNav = ({ data }) => { 
+export const FetchNav = ({ data }) => { 
   const [triggered, setTrigger] = useState(false);
   const intl = useIntl();
   const locale = intl.locale;
@@ -118,7 +118,7 @@ const FetchNav = ({ data }) => {
   )
 }
 
-const Nav = () => {
+export const Nav = props => {
   const data = useStaticQuery(graphql`
       query {
         site {
@@ -162,7 +162,7 @@ const Nav = () => {
       `)
 
     return (
-      <FetchNav data={data} />
+      <FetchNav {...props} data={data} />
    )
 }
 

@@ -57,7 +57,7 @@ const Legal = styled.section`
     align-items: center;
 `;
 
-const FetchFooter = ({ data }) => { 
+export const FetchFooter = ({ data }) => { 
   const intl = useIntl();
   const locale = intl.locale;
 
@@ -126,7 +126,7 @@ const FetchFooter = ({ data }) => {
   )
 }
 
-const Footer = () => {
+export const Footer = props => {
     const data = useStaticQuery(graphql`
         query {
           site {
@@ -177,8 +177,6 @@ const Footer = () => {
       `)
 
     return (
-      <FetchFooter data={data} />
+      <FetchFooter {...props} data={data} />
     )
 }
-
-export default Footer

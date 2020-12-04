@@ -6,9 +6,9 @@ import {
   Link
 } from "gatsby"
 import Fab from '@material-ui/core/Fab';
-import Nav from "../components/nav";
-import {Header} from "../components/header";
-import Footer from "../components/footer";
+import { Nav } from "../components/nav";
+import { Header } from "../components/header";
+import { Footer } from "../components/footer";
 import LangSwitch from './langSwitch';
 import {
   createMuiTheme

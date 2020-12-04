@@ -73,7 +73,7 @@ export const FetchHeader = ({location, title, data}) => {
   )
 }
 
-export const Header = ({ location, title }) => {
+export const Header = props => {
     const data = useStaticQuery(graphql`
         query {
           background: file(absolutePath: { regex: "/river.jpg/" }) {
@@ -88,8 +88,8 @@ export const Header = ({ location, title }) => {
 
     return (
       <FetchHeader 
-        location={location.pathname} 
-        title={title} 
+        location={props.location.pathname} 
+        title={props.title} 
         data={data} 
       />
   )
