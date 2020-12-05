@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import LangInfoSelector from "../components/langInfoSelector"
+import { LangInfoSelector } from "../components/langInfoSelector"
 import {
   useIntl
 } from "gatsby-plugin-intl"
