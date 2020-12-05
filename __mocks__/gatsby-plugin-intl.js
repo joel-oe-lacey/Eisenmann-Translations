@@ -1,3 +1,5 @@
+import React from "react"
+
 export const useIntl = () => {
     return {
         locale: 'en',
@@ -13,3 +15,10 @@ export const useIntl = () => {
 
 export const changeLocale = jest.fn();
 
+export const IntlContextConsumer = props => {
+    return (
+        <section>
+            {props.children}
+        </section>
+    )
+}
