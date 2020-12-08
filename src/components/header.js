@@ -1,7 +1,7 @@
 import React from "react"
 import {
   graphql,
-  StaticQuery
+  useStaticQuery
 } from "gatsby"
 import styled from 'styled-components'
 import logo from '../../content/assets/logo.svg'
@@ -60,7 +60,7 @@ const Backdrop = styled(Image)({
   objectFit: 'cover'
 });
 
-const FetchHeader = ({location, title, data}) => { 
+export const FetchHeader = ({location, title, data}) => { 
   const intl = useIntl()
   const rootPath = `${__PATH_PREFIX__}/${intl.locale}/`
 
@@ -73,10 +73,8 @@ const FetchHeader = ({location, title, data}) => {
   )
 }
 
-const Header = ({ location, title }) => {
-    return (
-    <StaticQuery
-      query={graphql`
+export const Header = props => {
+    const data = useStaticQuery(graphql`
         query {
           background: file(absolutePath: { regex: "/river.jpg/" }) {
             childImageSharp {
@@ -86,10 +84,13 @@ const Header = ({ location, title }) => {
             }
           }
         }
-      `}
-      render={data => <FetchHeader location={location.pathname} title={title} data={data} />}
-    />
+      `)
+
+    return (
+      <FetchHeader 
+        location={props.location.pathname} 
+        title={props.title} 
+        data={data} 
+      />
   )
 }
-
-export default Header

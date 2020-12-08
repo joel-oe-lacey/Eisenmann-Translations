@@ -1,13 +1,13 @@
 import React from "react"
 import {
+  Link,
   graphql,
-  StaticQuery
+  useStaticQuery
 } from "gatsby"
 import styled from 'styled-components'
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Link from './link';
 
 const Wrapper = styled(List)({
     height: 'max-content',
@@ -20,7 +20,7 @@ const Wrapper = styled(List)({
     overflow: 'scroll'
 })
 
-const FetchInfoSelector = ({ data }) => { 
+export const FetchInfoSelector = ({ data }) => { 
   const languages = data.allMarkdownRemark.edges;
 
   const list = () => (
@@ -49,10 +49,8 @@ const FetchInfoSelector = ({ data }) => {
   )
 }
 
-const LangInfoSelector = () => {
-    return (
-    <StaticQuery
-      query={graphql`
+export const LangInfoSelector = props => {
+    const data = useStaticQuery(graphql`
         query {
           site {
             siteMetadata {
@@ -81,10 +79,9 @@ const LangInfoSelector = () => {
             }
           }
         }
-      `}
-      render={data => <FetchInfoSelector data={data} />}
-    />
+      `)
+
+    return (
+    <FetchInfoSelector {...props} data={data} />
   )
 }
-
-export default LangInfoSelector

@@ -34,7 +34,7 @@ module.exports = {
         enabled: process.env.NODE_ENV !== 'production',
         sidebar: true,
         plugins: [
-          // We'll add some gatsby-tinacms plugins later
+          'gatsby-tinacms-git', 'gatsby-tinacms-remark'
         ],
       },
     },

@@ -10,6 +10,9 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "babel-jest": "^26.6.1",
+    "babel-preset-gatsby": "^0.5.14",
     "gatsby": "^2.24.50",
     "gatsby-image": "^2.4.16",
     "gatsby-plugin-feed": "^2.5.11",
@@ -28,14 +31,19 @@
     "gatsby-remark-smartypants": "^2.3.10",
     "gatsby-source-filesystem": "^2.3.25",
     "gatsby-theme-material-ui": "^1.0.13",
+    "gatsby-tinacms-git": "^0.31.0",
+    "gatsby-tinacms-remark": "^0.31.0",
     "gatsby-transformer-remark": "^2.8.29",
     "gatsby-transformer-sharp": "^2.5.13",
     "gh-pages": "^3.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.1",
     "material-ui-flags": "^1.0.14",
     "prismjs": "^1.21.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-test-renderer": "^17.0.1",
     "react-typography": "^0.16.19",
     "styled-components": "^5.2.0",
     "styled-reset": "^4.2.3",
@@ -46,6 +54,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "@testing-library/react": "^11.1.0",
     "prettier": "2.1.0"
   },
   "homepage": "https://github.com/joel-oe-lacey/Eisenmann-Translations#readme",
@@ -65,7 +74,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }

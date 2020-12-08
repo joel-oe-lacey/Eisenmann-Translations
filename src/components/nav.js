@@ -1,9 +1,11 @@
 import React, { useState } from "react"
-import { graphql, StaticQuery } from "gatsby"
-import {
-  useIntl,
+import { 
   Link,
-  FormattedMessage
+  graphql, 
+  useStaticQuery 
+} from "gatsby"
+import {
+  useIntl
 } from "gatsby-plugin-intl"
 
 import styled from 'styled-components'
@@ -34,7 +36,7 @@ const HomeLink = styled.h2`
   color: black;
 `
 
-const FetchNav = ({ data }) => { 
+export const FetchNav = ({ data }) => { 
   const [triggered, setTrigger] = useState(false);
   const intl = useIntl();
   const locale = intl.locale;
@@ -116,55 +118,52 @@ const FetchNav = ({ data }) => {
   )
 }
 
-const Nav = () => {
-
-    return (
-    <StaticQuery
-      query = {
-        graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-            }
+export const Nav = props => {
+  const data = useStaticQuery(graphql`
+      query {
+        site {
+          siteMetadata {
+            title
           }
-          allMarkdownRemark(filter: {
-              frontmatter: {
-                linkDisplay: {
-                  eq: true
-                }
-              }
-            }, sort: {
-            fields: frontmatter___groupingID
-            }) {
-            edges {
-              node {
-                excerpt
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                  type
-                  category
-                  redirectLink
-                  locale
-                }
+        }
+        allMarkdownRemark(filter: {
+            frontmatter: {
+              linkDisplay: {
+                eq: true
               }
             }
-          }
-          avatar: file(absolutePath: { regex: "/Banner_Ende.png/" }) {
-            childImageSharp {
-              fixed(width: 960, height: 100) {
-                ...GatsbyImageSharpFixed
+          }, sort: {
+          fields: frontmatter___groupingID
+          }) {
+          edges {
+            node {
+              excerpt
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                type
+                category
+                redirectLink
+                locale
               }
             }
           }
         }
-      `}
-      render={data => <FetchNav data={data} />}
-    />
-  )
+        avatar: file(absolutePath: { regex: "/Banner_Ende.png/" }) {
+          childImageSharp {
+            fixed(width: 960, height: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+      `)
+
+    return (
+      <FetchNav {...props} data={data} />
+   )
 }
 
 export default Nav
