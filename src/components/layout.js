@@ -11,7 +11,8 @@ import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import LangSwitch from './langSwitch';
 import {
-  createMuiTheme
+  createMuiTheme,
+  withStyles
 } from '@material-ui/core/styles';
 import {
   ThemeProvider
@@ -37,6 +38,12 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 `
+
+const ContactPipeline = withStyles({
+    root: {
+      width: '8rem',
+    },
+})(Fab);
 
 const Wrapper = styled.section`
     height: 100vh;
@@ -74,9 +81,9 @@ const Layout = ({ location, title, children }) => {
         <Toolkit>
           <LangSwitch />
           <Link to="/about/prices">
-            <Fab variant="extended" color="primary" aria-label="contact us">
+            <ContactPipeline variant="extended" color="primary" aria-label="contact us">
               {intl.formatMessage({ id: "contact" })}
-            </Fab>
+            </ContactPipeline>
           </Link>
         </Toolkit>
       </Wrapper>
