@@ -9,7 +9,7 @@ locale: en
 ---
 ## We’re Looking For…
 
-### Consultant
+### Intern
 
 #### Linguistic intern for 2-6 months
 
