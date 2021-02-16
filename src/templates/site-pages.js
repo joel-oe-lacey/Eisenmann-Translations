@@ -68,7 +68,13 @@ const SitePages = ({ data, location }) => {
         name: 'rawFrontmatter.locale',
         label: 'Locale',
         options: ['en', 'de'],
-      }]
+      },
+      {
+        component: 'textarea',
+        name: 'rawMarkdownBody',
+        label: 'Body',
+      },
+    ]
   }
   
   const [localizedPost, form] = useRemarkForm(localizedFetch, formOptions)

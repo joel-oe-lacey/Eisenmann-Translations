@@ -67,6 +67,11 @@ const BlogIndex = ({ data, location }) => {
         name: 'rawFrontmatter.locale',
         label: 'Locale',
         options: ['en', 'de'],
+      },
+      {
+        component: 'markdown',
+        name: 'rawMarkdownBody',
+        label: 'Body',
       }]
   }
   
