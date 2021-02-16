@@ -9,7 +9,7 @@ locale: en
 ---
 ## We’re Looking For…
 
-### Intern
+### Consultant
 
 #### Linguistic intern for 2-6 months
 
@@ -20,7 +20,7 @@ locale: en
 * good writing style
 * good general knowledge
 * non-smoker
-* lives in 
+* lives in bang
 
 **We can offer you:**
 

@@ -32,7 +32,10 @@ const StyledHolder = styled.h1`
 //color hardcoded here where it shouldn't be
 const FloatedTitle = styled.h1`
   font-weight: bold;
-  border-radius: 5%;
+  border-bottom-right-radius: 5% 30%;
+  border-top-right-radius: 5% 30%;
+  border-bottom-left-radius: 5% 30%;
+  border-top-left-radius: 5% 30%;
   margin: ${props => props.location === "/" ? '15% 0% 15% 30%' : '15%'};
   color: ${props => props.location === "/" ? 'black' : 'rgba(198, 40, 40, 0.6)'};
   position: ${props => props.location === "/" ? 'relative' : 'fixed'};
