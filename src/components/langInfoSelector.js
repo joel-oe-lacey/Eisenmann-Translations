@@ -17,7 +17,7 @@ const Wrapper = styled(List)({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    overflow: 'scroll'
+    overflowX: 'scroll'
 })
 
 export const FetchInfoSelector = ({ data }) => { 
